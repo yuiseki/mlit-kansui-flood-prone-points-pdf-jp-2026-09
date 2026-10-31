@@ -1,0 +1,9 @@
+[project]
+name = "mlit-kansui-flood-prone-points-jp-2026-09"
+version = "0.1.0"
+description = "Flood-prone road points (冠水想定箇所) of the regional development bureaus of MLIT, reproducible collection"
+requires-python = ">=3.11"
+dependencies = ["geopandas", "pyarrow", "pyogrio", "shapely", "duckdb", "pandas", "huggingface_hub", "pdfplumber"]
+
+[dependency-groups]
+dev = ["pytest", "ruff"]

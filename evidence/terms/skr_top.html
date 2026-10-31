@@ -1,0 +1,723 @@
+﻿<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="GENERATOR" content="JustSystems Homepage Builder Version 21.0.5.0 for Windows">
+
+	<title>四国地方整備局 | 国土交通省</title>
+
+	<meta name="description" content="国土交通省四国地方整備局は、四国の河川や道路、港湾・空港、まちづくりなど各分野の事業に取り組んでいます。">
+	<meta name="keywords" content="四国,整備局,四国地方整備局,国土交通省,防災,河川,道路,港湾,空港,営繕,建設産業,まちづくり">
+	<meta name="copyright" content="国土交通省 四国地方整備局">
+
+	<!--▽OGP▽-->
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="国土交通省四国地方整備局は、四国の河川や道路、港湾・空港、まちづくりなど各分野の事業に取り組んでいます。">
+	<meta property="og:title" content="国土交通省四国地方整備局のご紹介。">
+	<meta property="og:url" content="https://www.skr.mlit.go.jp/">
+	<meta property="og:image" content="https://www.skr.mlit.go.jp/assets/images/ogp-image_top.jpg">
+	<meta property="og:site_name" content="国土交通省四国地方整備">
+	<meta property="og:locale" content="ja_JP">
+	<!--OGP_end-->
+
+	<script src="assets/js/jquery-3.7.1.min.js"></script>
+	<!-- iframe CSS読込 -->
+	<script>
+		$(function(){
+			$('iframe').on('load', function(){
+				$('iframe').contents().find('head').append('<link rel="stylesheet" href="assets/css/press.css">');
+			});
+		});
+	</script>
+
+	<!-- CSS -->
+	<!-- ----------------------------- -->
+	<!-- Reset -->
+	<link rel="stylesheet" href="assets/css/reset.min.css">
+	<!-- Slickslider -->
+	<link rel="stylesheet" href="assets/slick/slick-theme.css">
+	<link rel="stylesheet" href="assets/slick/slick.css">
+	<!-- Navi -->
+	<link rel="stylesheet" href="assets/css/navi.min.css">
+	<!-- Font -->
+	<link rel="stylesheet" href="assets/font/font.css">
+	<!-- Header & Footer -->
+	<link rel="stylesheet" href="assets/css/common.css">
+	<!-- Frontpage Contents -->
+	<link rel="stylesheet" href="assets/css/front-style.css">
+
+	<script type="text/javascript">
+		function readEmergencyCsv(data) {
+		var target = '#slide-item';
+		var csv = $.csv.toArrays(data);
+		var insert = '';
+		var keyvisual_visible = true;
+		if ($(csv).length > 2) {
+		keyvisual_visible = false;
+		insert += '<div class="emergency_block">'
+		insert += '<hr>'
+		insert += '<p><img src="./images/emergency_icon.png" alt="">緊急災害情報</p>';
+		insert += '<div class="area">'
+		insert += '<div class="marquee">ただいま四国地方整備局の管理施設の被害情報や災害対応状況等を速報として掲載しています。ただいま四国地方整備局の管理施設の被害情報や災害対応状況等を速報として掲載しています。ただいま四国地方整備局の管理施設の被害情報や災害対応状況等を速報として掲載しています。</div>';
+		insert += '</div>';
+		insert += '<ul>';
+
+		// 災害速報表示
+		for ($i = 2; $i < $(csv).length; $i++) {
+		insert += '<li>';
+		insert += '<a href="' + $(csv)[$i][2] + '"><span>' + $(csv)[$i][0] + '</span>';
+		insert += '<span>' + $(csv)[$i][1] + '</span></a>';
+		insert += '</li>';
+		}
+		insert += '</ul>';
+		insert += '<div id="bousai-button"><a href="./bosai/sikoku/sokuhou/sokuhou.html">防災・災害速報ページへ　＞</a></div>';
+		insert += '</div>';
+		insert += '<div class="menu_bg">';
+		insert += '<div class="menu_panel road_info">';
+		insert += '<a href="http://www.skr.mlit.go.jp/road/info/index.html"><img src="./images/road_infomation.png" alt="四国地方道路情報"><p>四国地方道路情報<br>(通行規制・気象情報)</p></a>';
+		insert += '</div>';
+		insert += '<div class="menu_panel national_road_info">';
+		insert += '<a href="http://www.skrdoukan.com/road/pc/pc-roadinfo.html"><img src="./images/national_road_infomation.png" alt="四国地方整備局 管理国道情報"><p>四国地方整備局<br>管理国道情報<span>(試作版)</span></p></a>';
+		insert += '</div>';
+		insert += '<div class="menu_panel expressway_info">';
+		insert += '<a href="http://www.jartic.or.jp/"><img src="./images/expressway_infomation.png" alt="高速道路情報(日本道路交通情報センター)"><p>高速道路情報<br><span>(日本道路交通情報センター)</span></p></a>';
+		insert += '</div>';
+		insert += '<div class="menu_panel river_info">';
+		insert += '<a href="http://www.river.go.jp/kawabou/ipTopGaikyo.do"><img src="./images/river_infomation.png"alt="川の防災情報"><p>川の防災情報</p></a>';
+		insert += '</div>';
+		insert += '<div class="menu_panel dimaps">';
+		insert += '<a href="http://www.mlit.go.jp/saigai/dimaps/index.html"><img src="./images/dimaps.png" alt="総合災害情報システム DiMAPS"><p>総合災害情報システム<br>DiMAPS</p></a>';
+		insert += '</div>';
+		insert += '</div>';
+		}
+		if ($(csv)[0][1] == '表示') {
+		keyvisual_visible = false;
+		insert += '<div class="tec-force"><a href="https://www.skr.mlit.go.jp/kikaku/tec-force/index.html"><img src="./images/tec-force.png" alt="TEC-FORCE～緊急災害対策派遣隊～　出動中"></a></div>';
+		}
+		if (keyvisual_visible == false) {
+		$(target).append(insert);
+		$('.key_visual_bg').css('display', 'none');
+		}
+		}
+
+		function readRelatedwebpageCsv(data) {
+		var target = '#link-body';
+		var csv = $.csv.toArrays(data);
+		var insert = '';
+		insert += '<ul>';
+		for ($i = 1; $i < $(csv).length; $i++) {
+		if ($(csv)[$i][3] == '表示') {
+		insert += '<li><a href="' + $(csv)[$i][2] + '" title="' + $(csv)[$i][0] + '"><img src="./link/' + $(csv)[$i][1] + '" alt="' + $(csv)[$i][0] + '"></a></li>';
+		}
+		}
+		insert += '</ul>';
+		$(target).append(insert);
+		}
+		var emergencycsv = './csv/emergency.csv';
+		$(function() {
+		$.get(emergencycsv, readEmergencyCsv, 'text');
+		});
+		var linkcsv = './csv/related_webpage.csv';
+		$(function() {
+		//$.get(related_webpage.csv, 'text');
+		});
+	</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNHFLWN0BH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DNHFLWN0BH');
+</script>
+
+
+</head>
+
+<body>
+
+<!-- =========================== -->
+<!-- Header -->
+<!-- =========================== -->
+<header>
+	<h1>
+		<img src="assets/images/common/shikokuchisei_logo.png" alt="国土交通省 四国地方整備局">
+	</h1>
+	<div>
+		<!-- 文字サイズ -->
+		<div id="textsize">
+			<p>文字サイズ</p>
+			<button type="button" class="size_btn size_active" id="base-size">標準</button>
+			<button type="button" class="size_btn" id="large-size">大</button>
+		</div>
+
+		<!-- SNS・Sitemap ICON -->
+		<!-- -------------------------- -->
+		<div id="sns-sitemap-icon">
+			<!-- SNSアイコン -->
+			<div id="sns_icon">
+				<a href="https://www.instagram.com/shikokuchisei" target="_blank" rel="noopener noreferrer">
+					<img src="assets/images/common/sns_Instagram.png" alt="Instagram">
+				</a>
+				<a href="https://www.facebook.com/shikokuchisei" target="_blank" rel="noopener noreferrer">
+					<img src="assets/images/common/sns_facebook.png" alt="facebook">
+				</a>
+				<a href="https://x.com/mlit_shikoku" target="_blank" rel="noopener noreferrer">
+					<img src="assets/images/common/sns_X.png" alt="X">
+				</a>
+				<a href="https://www.youtube.com/c/mlitshikoku" target="_blank" rel="noopener noreferrer">
+					<img src="assets/images/common/sns_YouTube.png" alt="YouTube">
+				</a>
+			</div>
+			<div id="sitemap-icon">
+				<a href="https://www.skr.mlit.go.jp/menu/sitemap.html">
+					<img src="assets/images/common/sitemap-icon.png" alt="サイトマップ">
+				</a>
+			</div>
+		</div>
+
+		<!-- サイト内検索 -->
+		<div id="site-search">
+			<div class="search-btn"></div>
+			<div id="search-box">
+				<form role="search" method="get" action="https://google.com/cse" accept-charset="UTF-8">
+					<input type="hidden" name="cx" value="017902254640684861940:djhkyvm23le" />
+					<input type="text" value="" name="q" id="search-text" placeholder="検索ワードを入力">
+					<input type="submit" id="searchsubmit" value="">
+				</form>
+				<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- ============================== -->
+<!-- Global Navi -->
+<!-- ============================== -->
+<nav>
+	<input id="hamburger" type="checkbox">
+	<label for="hamburger">
+		<span><!-- ≡top --></span>
+		<span><!-- ≡center --></span>
+		<span><!-- ≡bottom --></span>
+	</label>
+	<label for="hamburger" id="menu-bg"></label>
+	<ul>
+		<li><a href="https://www.skr.mlit.go.jp/bousaig/02.html"><span>防災情報</span></a></li>
+		<li><a href="https://www.skr.mlit.go.jp/menu/nyusatu.html"><span>入札・<br>契約情報</span></a></li>
+		<li><a href="https://www.skr.mlit.go.jp/kikaku/index.html"><span>建設事業者<br>向け情報</span></a></li>
+		<li><a href="https://www.skr.mlit.go.jp/official%20partner/index.html"><span>オフィシャル<br>広報パートナー</span></a></li>
+		<li><a href="https://www.skr.mlit.go.jp/recruit/index.html"><span>採用案内</span></a></li>
+		<li><a href="https://www.skr.mlit.go.jp/menu/shiryo.html"><span>組織紹介</span></a></li>
+	</ul>
+</nav>
+
+<!--  ▼ Frontpage Contents ▼ -->
+
+<div id="slide-item"></div>
+
+<!-- =========================== -->
+<!-- Main Visuals -->
+<!-- =========================== -->
+<div id="slider-block">
+	<ul class="slide">
+		<li>
+			<a href="https://www.skr.mlit.go.jp/kasen/index.html">
+				<img class="pc" src="assets/images/front-page/main-visual_kasen.jpg" alt="河川部">
+				<img class="tab" src="assets/images/front-page/main-visual_kasen-tb.jpg" alt="河川部">
+				<img class="sp" src="assets/images/front-page/main-visual_kasen-sp.jpg" alt="河川部">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.skr.mlit.go.jp/road/index2.html">
+				<img class="pc" src="assets/images/front-page/main-visual_duoro.jpg" alt="道路部">
+				<img class="tab" src="assets/images/front-page/main-visual_duoro-tb.jpg" alt="道路部">
+				<img class="sp" src="assets/images/front-page/main-visual_duoro-sp.jpg" alt="道路部">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.pa.skr.mlit.go.jp">
+				<img class="pc" src="assets/images/front-page/main-visual_kowan.jpg" alt="港湾空港部">
+				<img class="tab" src="assets/images/front-page/main-visual_kowan-tb.jpg" alt="港湾空港部">
+				<img class="sp" src="assets/images/front-page/main-visual_kowan-sp.jpg" alt="港湾空港部">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.skr.mlit.go.jp/kensei/index.html">
+				<img class="pc" src="assets/images/front-page/main-visual_kensei.jpg" alt="建政部">
+				<img class="tab" src="assets/images/front-page/main-visual_kensei-tb.jpg" alt="建政部">
+				<img class="sp" src="assets/images/front-page/main-visual_kensei-sp.jpg" alt="建政部">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.skr.mlit.go.jp/eizen/index.html">
+				<img class="pc" src="assets/images/front-page/main-visual_eizen.jpg" alt="営繕部">
+				<img class="tab" src="assets/images/front-page/main-visual_eizen-tb.jpg" alt="営繕部">
+				<img class="sp" src="assets/images/front-page/main-visual_eizen-sp.jpg" alt="営繕部">
+			</a>
+		</li>
+		<li>
+			<a href="https://www.skr.mlit.go.jp/recruit/index.html">
+				<img class="pc" src="assets/images/front-page/main-visual_saiyo.jpg" alt="採用関係">
+				<img class="tab" src="assets/images/front-page/main-visual_saiyo-tb.jpg" alt="採用関係">
+				<img class="sp" src="assets/images/front-page/main-visual_saiyo-sp.jpg" alt="採用関係">
+			</a>
+		</li>
+	</ul>
+</div>
+
+<!-- ============================== -->
+<!-- 注意喚起 動画 -->
+<!-- ============================== -->
+<!--
+<article id="attention-video">
+	<div id="video-block">
+	<div>
+			<iframe src="https://www.youtube.com/embed/VgevUw4ECcg?autoplay=1&mute=1&playsinline=1&loop=1&playlist=VgevUw4ECcg" title="YouTube video player" frameborder="0" allow="fullscreen" >
+			</iframe>
+		</div>
+	</div>
+	<div id="video-text">
+		<h2>注意喚起</h2>
+		<h3>大雪に伴なう積雪・路面の凍結にご注意ください！</h3>
+		<p>降雪のおそれのある場合は不要不急な外出を控え、やむを得ず外出する場合は、冬用タイヤの装着とタイヤチェーンの携行をお願いします。</p>
+	</div>
+</article>
+-->
+
+<!-- =========================== -->
+<!-- 停電HP停止 -->
+<!-- =========================== -->
+<!--
+<section id="saigai-bosai">
+	<h2>ホームページの停止について 11月15日(土) 7時30分～22時00分</h2>
+
+	<p><font size="4">上記の予定でホームページの停止を予定しています。</p>
+
+</section> 
+
+-->
+<!--
+<tr>
+<h2 style="text-align:center">
+<font size="5"color="#FF0000">11月15日(土) 7時30分～22時00分までの予定で<br>
+ ホームページの停止を予定しています。ご不便をおかけします。</font><br>
+</td>
+</h2>
+</tr>
+-->
+<!-- =========================== -->
+<!-- 渇水情報 -->
+<!-- =========================== -->
+<!--
+<section id="kaku-oshirase">
+	<h2>四国管内渇水の状況</h2>
+	<dl>
+		
+		<dd>
+			<a href="https://www.skr.mlit.go.jp/kasen/index.html" target="_blank" rel="noopener noreferrer">
+				大渡ダム上流では少雨傾向が続いています。ダムの状況はこちらから。
+			</a>
+		</dd>
+	</dl>
+	
+</section>
+-->
+
+
+<!--
+
+<tr>
+<h2 style="text-align:center">
+<font size="5"color="#0000FF">渇水のため、節水へのご協力をお願いいたします。</font>
+
+			<a href="https://www.skr.mlit.go.jp/kasen/damu/pdf/kasui.pdf" target="_blank" rel="noopener noreferrer">
+				<font size="5"color="#0000FF"><span style="text-decoration: underline;">（詳しくはこちら）</a></font><br><br>
+		
+</td>
+</h2>
+</tr>
+
+ -->
+
+<!--
+<h2 style="text-align:center">
+<a href="https://www.skr.mlit.go.jp/bousaig/index.html" target="_blank"><img src="mizu.gif"></a>
+<br>
+<br>
+</h2>
+-->
+<!-- =========================== -->
+<!-- 災害・防災情報 -->
+<!-- =========================== -->
+
+
+<!--
+<section id="saigai-bosai">
+	<h2>TEC-FORCE</h2>
+	<p>現在、災害情報はありません。</p>
+	<dl>
+		<dt>2024年1月5日<span>0時00分</span></dt>
+		<dd>
+			<a href="https://www.skr.mlit.go.jp/kikaku/tec-force/index.html" target="_blank" rel="noopener noreferrer">
+				現在、令和6年能登半島地震の対応としてTEC-FORCEを派遣しています。活動状況はこちらから。
+			</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt>2024年●月●日<span>0時00分</span></dt>
+		<dd>
+			<a href="#" target="_blank" rel="noopener noreferrer">
+				令和5年12月24日0時00分現在の国道32号の積雪状況です。<br>路面凍結のおそれがありますので、最新の交通情報の確認をお願いします。
+			</a>
+		</dd>
+	</dl>
+</section>
+-->
+<!-- ============================== -->
+<!-- Banner -->
+<!-- ============================== -->
+<div id="banner-block">
+        <!-- 四国の防災情報 -->
+	<a href="https://www.skr.mlit.go.jp/bousaig/index.html" target="_blank"><img src="assets/images/front-page/bousai_banner.png"></a>
+	<!-- 採用情報 -->
+	<a href="https://www.skr.mlit.go.jp/recruit/index.html" target="_blank"><img src="assets/images/front-page/recruit_banner/recruit_banner250829.png"></a>
+	<!-- 現場へ行こう -->
+	<a href="https://www.skr.mlit.go.jp/kikaku/spotguide/" target="_blank"><img src="assets/images/front-page/GI_banner.png"></a>
+        <!-- 官庁訪問 -->
+	<a href="https://www.skr.mlit.go.jp/recruit/R8/r8kanchou/kousotsu/tsuika_chirashi.pdf" target="_blank"><img src="assets/images/front-page/recruit_banner/kanchou_banner.PNG"></a>
+</div>
+
+
+	<!-- R8熊本地震TEC -->
+<div style="text-align: center;
+    margin-top: -20px;
+    margin-bottom: 30px;">
+
+
+<a href="https://www.skr.mlit.go.jp/kikaku/tec-force/index.html" target="_blank"><img src="assets/images/front-page/R8kumamoto.png" width="600" height="85" ></a>
+	
+</div>
+
+
+	<!-- 中東情勢 -->
+
+<div style="text-align: center;
+    margin-top: -20px;
+    margin-bottom: 30px;">
+
+
+<a href="https://www.mlit.go.jp/sogoseisaku/chuto_josei.html" target="_blank"><img src="assets/images/front-page/chuutoujousei.jpg" width="600" height="85" ></a>
+	
+</div>
+
+
+<!-- ============================== -->
+<!-- 記者発表・お知らせ -->
+<!-- ============================== -->
+<section id="press-news">
+
+<!-- 記者発表 -->
+<!-- --------------------------------->
+<div id="press">
+	<h2><span>記者発表</span></h2>
+	<div class="indexpres">
+		<iframe id="indexpres" src="indexpres.html" style="border:0" title="記者発表"></iframe>
+	</div>
+	<a id="kako-press" href="https://www.skr.mlit.go.jp/pres/index.html" target="_blank" rel="noopener noreferrer">過去の記者発表はこちら</a>
+</div>
+
+<!-- お知らせ -->
+<!-- --------------------------------->
+<div id="news">
+	<h2><span>お知らせ</span></h2>
+
+    <dl>
+             <span class="new"></span>
+                <dt>10月26日</dt>
+                <dd>
+                        <a href="https://www.skr.mlit.go.jp/recruit/R8/r8kanchou/kousotsu/tsuika_chirashi.pdf">
+                                 【技術】官庁訪問（高卒者・社会人係員級）のご案内（高知日程追加）
+			</a>
+		</dd>
+   </dl>
+   <dl>
+                <dt>10月20日</dt>
+                <dd>
+                        <a href="https://www.skr.mlit.go.jp/recruit/R8/r8shakaijin/hyougaki/hyougaki.pdf">
+                                 【技術】2026年度国家公務員中途採用者選考試験（就職氷河期世代）第2次選考（採用面接等）について
+			</a>
+		</dd>
+   </dl>
+   <dl>
+                <dt>10月16日</dt>
+                <dd>
+                        <a href="recruit//R8/4kansyo2.pdf">
+                                 【四国地方整備局・四国経済産業局・四国厚生支局・香川労働局】4官署合同業務説明会in愛媛
+
+			</a>
+	</dd>
+    </dl>
+    <dl>
+                <dt>10月14日</dt>
+                <dd>
+                        <a href="https://www.skr.mlit.go.jp/recruit/R8/r8shakaijin/20261014/hosa.pdf">
+                                 【技術】選考採用試験（社会人経験者・課長補佐級）第４回募集開始のご案内
+
+			</a>
+		</dd>
+   </dl>
+   <dl>
+                <dt>10月14日</dt>
+                <dd>
+                        <a href="https://www.skr.mlit.go.jp/recruit/R8/r8shakaijin/20261014/kakarichou_annnai.pdf">
+                                 【技術】選考採用試験（社会人経験者・係長級）第４回募集開始のご案内
+
+			</a>
+		</dd>
+   </dl>
+   <dl>
+                <dt>10月14日</dt>
+                <dd>
+                        <a href="https://www.skr.mlit.go.jp/recruit/R8/r8shakaijin/20261014/kouwan_annnai.pdf">
+                                 【技術】選考採用試験（社会人経験者・係長級（港湾空港））第４回募集開始のご案内
+
+			</a>
+		</dd>
+   </dl>
+<!-- 12/18に削除 -->
+   <dl>
+                <dt>10月5日</dt>
+                <dd>
+                        <a href="recruit/R8/r8kanchou/kousotsu/kousotsu_chirashi.pdf">
+                                 【技術】官庁訪問（高卒者・社会人係員級）のご案内
+
+			</a>
+		</dd>
+   </dl>
+<!-- 11/5に削除 -->
+   <dl>
+                <dt>9月18日</dt>
+                <dd>
+                        <a href="recruit/R8/4kansyo.pdf">
+                                 【四国地方整備局・四国経済産業局・四国厚生支局・香川労働局】４官署合同オンライン業務説明会のご案内
+
+			</a>
+		</dd>
+    </dl>
+    <dl>
+
+
+                <dt>9月8日</dt>
+                <dd>
+                        <a href="https://www.skr.mlit.go.jp/bousaig/%E3%80%90%E5%88%A5%E6%B7%BB%E3%80%91260826_%E3%83%AC%E3%83%99%E3%83%AB%EF%BC%95%E5%A4%A7%E9%9B%A8%E7%89%B9%E5%88%A5%E8%AD%A6%E5%A0%B1%E7%99%BA%E8%A1%A8%E6%99%82%E3%81%AE%E6%B3%A8%E6%84%8F%E5%96%9A%E8%B5%B7%E3%83%81%E3%83%A9%E3%82%B7%E3%81%AE%E6%B4%BB%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.pdf">
+                                 「レベル５大雨特別警報」が発表されたら 
+			</a>
+		</dd>
+	</dl>
+       
+
+
+ 
+ 
+<!--
+        <dl>
+                <span class="new"></span>
+                <dt>6月3日</dt>
+                <dd>
+                        <a href="https://www.skr.mlit.go.jp/recruit/r7shakaijin_jimu251001.html">
+
+                                 【事務】選考採用試験（社会人経験者・係長級（事務））のご案内
+
+
+			</a>
+		</dd>
+	</dl>
+
+
+        <dl>
+                <span class="new"></span>
+                <dt>5月12日</dt>
+                <dd>
+                        <a href="https://www.skr.mlit.go.jp/recruit/R7/r7genbakengaku.pdf">
+
+                                 【事務・技術】国土交通省四国地方整備局　現場見学会のご案内
+
+
+			</a>
+		</dd>
+	</dl>
+
+
+        <dl>
+                <span class="new"></span>
+                <dt>5月26日</dt>
+                <dd>
+                        <a href="https://www.skr.mlit.go.jp/recruit/r7shakaijin_kouwan251001.html">
+
+                                 【港湾空港】選考採用試験（社会人経験者・係長級（技術））のご案内
+
+
+			</a>
+		</dd>
+	</dl>
+
+-->
+
+
+	<!--
+	<dl>
+		<span class="new"></span>←NEWアイコン
+		<dt>2024年●月●日</dt>
+		<dd>
+			<a href="#" target="_blank" rel="noopener noreferrer">
+				□□□□□□□□□■□□□□□□□□□■
+			</a>
+		</dd>
+	</dl>
+	-->
+
+</div><!-- END-#news -->
+
+</section><!-- END-#press-news -->
+
+
+
+
+
+<!-- ============================== -->
+<!-- Topics -->
+<!-- ============================== -->
+<article id="topics">
+	<h2><span>トピックス</span></h2>
+	<ul>
+		<li><a href="https://www.skr.mlit.go.jp/bousaig/05.html
+			"><span>TEC-FORCE</span></a></li>
+		<li><a href="https://www.skr.mlit.go.jp/menu/yosan.html"><span>四国地方整備局<span>の予算</span></span></a></li>
+		<li><a href="https://www.skr.mlit.go.jp/jigyoinfo/index.html"><span>事業関連情報</span></a></li>
+		<li><a href="https://www.skr.mlit.go.jp/menu/nyusatu.html"><span>入札・契約情報</span></a></li>
+		<li><a href="https://www.skr.mlit.go.jp/soumu/tekisei/compliance.html"><span>コンプライアンスの<br>取り組み</span></a></li>
+		<li><a href="https://www.skr.mlit.go.jp/soumu/koukai/index.html"><span>情報公開</span></a></li>
+	</ul>
+</article>
+
+<!-- ============================== -->
+<!-- 各部門のご紹介 -->
+<!-- ============================== -->
+<article id="departments">
+	<h2><span>各部門のご紹介</span></h2>
+	<ul>
+		<li id="somu"><a href="https://www.skr.mlit.go.jp/soumu/top.html"><span>総務部</span></a></li>
+		<li id="kikaku"><a href="https://www.skr.mlit.go.jp/kikaku/index.html"><span>企画部</span></a></li>
+		<li id="kensei"><a href="https://www.skr.mlit.go.jp/kensei/index.html"><span>建政部</span></a></li>
+		<li id="kasen"><a href="https://www.skr.mlit.go.jp/kasen/index.html"><span>河川部</span></a></li>
+		<li id="road"><a href="https://www.skr.mlit.go.jp/road/index2.html"><span>道路部</span></a></li>
+		<li id="kowan"><a href="https://www.pa.skr.mlit.go.jp"><span>港湾空港部</span></a></li>
+		<li id="eizen"><a href="https://www.skr.mlit.go.jp/eizen/index.html"><span>営繕部</span></a></li>
+		<li id="yochi"><a href="https://www.skr.mlit.go.jp/youti/index.html"><span>用地部</span></a></li>
+		<li id="bosai"><a href="https://www.skr.mlit.go.jp/bousaig/index.html"><span>防災グループ</span></a></li>
+	</ul>
+</article>
+
+<!-- ============================== -->
+<!-- お問い合わせ窓口 -->
+<!-- ============================== -->
+<div id="for-contact">
+	<a href="https://www.skr.mlit.go.jp/toiawase/index.html">
+		<span>お問い合わせ窓口</span>
+	</a>
+</div>
+
+<!-- ============================== -->
+<!-- SNS 情報配信中 -->
+<!-- ============================== -->
+<article id="sns-block">
+<h2><span>SNS情報配信中</span></h2>
+<div>
+	<div><!-- X (Twitter) -->
+		<a href="https://x.com/mlit_shikoku" target="_blank" rel="noopener noreferrer"><img src="assets/images/front-page/X_banner.png" alt="X投稿へリンク"></a>
+		<a href="assets/pdf/X_policy.pdf" target="_blank" rel="noopener noreferrer">X運用方針</a>
+	</div>
+	<div><!-- YouTube -->
+		<a href="https://www.youtube.com/c/mlitshikoku" target="_blank" rel="noopener noreferrer"><img src="assets/images/front-page/YouTube_banner.png" alt="youtubeチャンネルへリンク"></a>
+		<a href="assets/pdf/YouTube_policy.pdf" target="_blank" rel="noopener noreferrer">YouTube運用方針</a>
+	</div>
+	<div><!-- Instagram -->
+		<a href="https://www.instagram.com/shikokuchisei/" target="_blank" rel="noopener noreferrer"><img src="assets/images/front-page/Instagram_banner.png" alt="instagramへリンク"></a>
+		<a href="assets/pdf/Instagram_policy.pdf" target="_blank" rel="noopener noreferrer">Instagram運用方針</a>
+	</div>
+	<div><!-- facebook -->
+		<a href="https://ja-jp.facebook.com/shikokuchisei/" target="_blank" rel="noopener noreferrer"><img src="assets/images/front-page/facebook_banner.png" alt="facebookへリンク"></a>
+		<a href="assets/pdf/Facebook_policy.pdf" target="_blank" rel="noopener noreferrer">facebook運用方針</a>
+	</div>
+</div>
+</article><!-- END-#sns-block -->
+
+<!--  ▲ END-Frontpage Contents ▲ -->
+
+<!-- =========================== -->
+<!-- Footer -->
+<!-- =========================== -->
+<footer>
+	<ul>
+		<li><a href="https://www.skr.mlit.go.jp/manual.html">リンク・著作権・<br>プライバシーポリシー等<br>について</a></li>
+		<li><a href="https://www.skr.mlit.go.jp/link/index.html">リンク集</a></li>
+		<li><a href="https://www.skr.mlit.go.jp/toiawase/index.html">お問い合わせ窓口</a></li>
+		<li><a href="https://www.skr.mlit.go.jp/menu/sitemap.html">サイトマップ</a></li>
+	</ul>
+	<address>
+		<p><span>国土交通省 四国地方整備局</span></p>
+		<p>〒760-8554&nbsp;<span>香川県高松市サンポート3番33号</span>&nbsp;</p>
+		<p>TEL：087-851-8061（代表）</p>
+	</address>
+	<p id="analytics-notice">
+		<span>
+			当サイトでは、Google によるアクセス解析ツール「Google アナリティクス」を利用しています。Google アナリティクスの利用規約・プライバシーポリシーについてはGoogle アナリティクスのホームページでご確認ください。
+		</span>
+	</p>
+	<small>© 2025 国土交通省 四国地方整備局</small>
+</footer>
+
+<!-- =========================== -->
+<!-- Top of Page -->
+<!-- =========================== -->
+<a href="#" id="top-of-page">
+	<span><!-- top of page --></span>
+</a>
+
+<!-- =========================== -->
+<!-- JS -->
+<!-- =========================== -->
+
+<!-- Text Size -->
+<!-- ----------------------------- -->
+<script src="assets/js/jquery.cookie.js"></script>
+<script src="assets/js/text-size.js"></script>
+<!-- Site Search -->
+<!-- --------------------------- -->
+<script src="assets/js/site-search.js"></script>
+<!-- Top of Page -->
+<!-- --------------------------- -->
+<script src="assets/js/top-of-page.js"></script>
+
+<!-- ▼========== スライダー（slick-1.8.1） ==========▼ -->
+<script src="assets/slick/ajax-loader.gif"></script>
+<script src="assets/slick/slick.min.js"></script>
+<script>
+	$(".slide").slick({
+		fade: true,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		infinite: true,
+		speed: 1000,
+		arrows: true,
+		dots: true,
+	});
+</script>
+
+</body>
+</html>

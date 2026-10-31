@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+data/raw/*/pdf
+data/raw/*/kml
+logs/

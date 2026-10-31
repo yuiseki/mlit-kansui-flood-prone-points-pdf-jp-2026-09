@@ -1,0 +1,192 @@
+{
+ "run": "20261030",
+ "files": {
+  "02_aomori_kansui_point": {
+   "placemarks": 69,
+   "withdrawn_commented_out": 0
+  },
+  "03_iwate_kansui_point": {
+   "placemarks": 75,
+   "withdrawn_commented_out": 0
+  },
+  "04_miyagi_kansui_point": {
+   "placemarks": 96,
+   "withdrawn_commented_out": 0
+  },
+  "05_akita_kansui_point": {
+   "placemarks": 72,
+   "withdrawn_commented_out": 0
+  },
+  "06_yamagata_kansui_point": {
+   "placemarks": 79,
+   "withdrawn_commented_out": 0
+  },
+  "07_fukushima_kansui_point": {
+   "placemarks": 112,
+   "withdrawn_commented_out": 0
+  },
+  "08_ibaraki_kansui_point": {
+   "placemarks": 31,
+   "withdrawn_commented_out": 0
+  },
+  "09_tochigi_kansui_point": {
+   "placemarks": 104,
+   "withdrawn_commented_out": 0
+  },
+  "10_gunma_kansui_point": {
+   "placemarks": 49,
+   "withdrawn_commented_out": 0
+  },
+  "11_saitama_kansui_point": {
+   "placemarks": 246,
+   "withdrawn_commented_out": 0
+  },
+  "12_chiba_kansui_point": {
+   "placemarks": 91,
+   "withdrawn_commented_out": 0
+  },
+  "13_tokyo_kansui_point": {
+   "placemarks": 135,
+   "withdrawn_commented_out": 0
+  },
+  "14_kanagawa_kansui_point": {
+   "placemarks": 119,
+   "withdrawn_commented_out": 0
+  },
+  "19_yamanashi_kansui_point": {
+   "placemarks": 15,
+   "withdrawn_commented_out": 0
+  },
+  "20_nagano_kansui_point": {
+   "placemarks": 113,
+   "withdrawn_commented_out": 0
+  },
+  "15_niigata_kansui_point": {
+   "placemarks": 472,
+   "withdrawn_commented_out": 0
+  },
+  "16_toyama_kansui_point": {
+   "placemarks": 167,
+   "withdrawn_commented_out": 0
+  },
+  "17_ishikawa_kansui_point": {
+   "placemarks": 112,
+   "withdrawn_commented_out": 0
+  },
+  "21_gifu_kansui_point": {
+   "placemarks": 138,
+   "withdrawn_commented_out": 0
+  },
+  "22_shizuoka_kansui_point": {
+   "placemarks": 124,
+   "withdrawn_commented_out": 0
+  },
+  "23_aichi_kansui_point": {
+   "placemarks": 237,
+   "withdrawn_commented_out": 0
+  },
+  "24_mie_kansui_point": {
+   "placemarks": 192,
+   "withdrawn_commented_out": 0
+  },
+  "18_fukui_kansui_point": {
+   "placemarks": 97,
+   "withdrawn_commented_out": 0
+  },
+  "25_shiga_kansui_point": {
+   "placemarks": 100,
+   "withdrawn_commented_out": 0
+  },
+  "26_kyoto_kansui_point": {
+   "placemarks": 112,
+   "withdrawn_commented_out": 1
+  },
+  "27_osaka_kansui_point": {
+   "placemarks": 180,
+   "withdrawn_commented_out": 1
+  },
+  "28_hyogo_kansui_point": {
+   "placemarks": 162,
+   "withdrawn_commented_out": 0
+  },
+  "29_nara_kansui_point": {
+   "placemarks": 50,
+   "withdrawn_commented_out": 0
+  },
+  "30_wakayama_kansui_point": {
+   "placemarks": 16,
+   "withdrawn_commented_out": 0
+  },
+  "36_tokushima_kansui_point": {
+   "placemarks": 19,
+   "withdrawn_commented_out": 0
+  },
+  "37_kagawa_kansui_point": {
+   "placemarks": 40,
+   "withdrawn_commented_out": 0
+  },
+  "38_ehime_kansui_point": {
+   "placemarks": 27,
+   "withdrawn_commented_out": 0
+  },
+  "39_kochi_kansui_point": {
+   "placemarks": 33,
+   "withdrawn_commented_out": 0
+  },
+  "40_fukuoka_kansui_point": {
+   "placemarks": 144,
+   "withdrawn_commented_out": 0
+  },
+  "41_saga_kansui_point": {
+   "placemarks": 40,
+   "withdrawn_commented_out": 0
+  },
+  "42_nagasaki_kansui_point": {
+   "placemarks": 19,
+   "withdrawn_commented_out": 0
+  },
+  "43_kumamoto_kansui_point": {
+   "placemarks": 156,
+   "withdrawn_commented_out": 0
+  },
+  "44_oita_kansui_point": {
+   "placemarks": 32,
+   "withdrawn_commented_out": 0
+  },
+  "45_miyazaki_kansui_point": {
+   "placemarks": 33,
+   "withdrawn_commented_out": 0
+  },
+  "46_kagoshima_kansui_point": {
+   "placemarks": 144,
+   "withdrawn_commented_out": 0
+  },
+  "31_tottori_kansui_point": {
+   "placemarks": 32,
+   "withdrawn_commented_out": 0
+  },
+  "32_shimane_kansui_point": {
+   "placemarks": 47,
+   "withdrawn_commented_out": 0
+  },
+  "33_okayama_kansui_point": {
+   "placemarks": 85,
+   "withdrawn_commented_out": 0
+  },
+  "34_hiroshima_kansui_point": {
+   "placemarks": 68,
+   "withdrawn_commented_out": 0
+  },
+  "35_yamaguchi_kansui_point": {
+   "placemarks": 41,
+   "withdrawn_commented_out": 0
+  }
+ },
+ "excluded_unconfirmed": {},
+ "rows": 4525,
+ "withdrawn_total": 2,
+ "rows_without_pdf": 4,
+ "pdf_key_duplicates": 92,
+ "name_duplicates_within_layer": 182,
+ "coordinate_duplicates": 11
+}

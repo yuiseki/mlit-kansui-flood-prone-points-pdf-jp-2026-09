@@ -1,0 +1,23 @@
+{
+ "points": 4525,
+ "match": {
+  "pdf_unique": 3997,
+  "pdf_shared": 504,
+  "pdf_missing": 20,
+  "no_pdf": 4
+ },
+ "parse_status_of_matched": {
+  "ok": 3943,
+  "ambiguous": 54
+ },
+ "layout_of_matched": {
+  "A": 3359,
+  "B": 638
+ },
+ "attributes_ok": 3943,
+ "key_consistent": {
+  "True": 3857,
+  "None": 549,
+  "False": 119
+ }
+}

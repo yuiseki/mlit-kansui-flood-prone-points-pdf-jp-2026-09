@@ -1,0 +1,61 @@
+Each bureau's own site-wide terms say that its content is usable under the Public Data License 1.0
+(公共データ利用規約 第1.0版, PDL1.0; compatible with CC BY 4.0), unless a right notice says otherwise. The basis is the
+bureaus' site-wide terms. No licence notice specific to the Webmap pages or the KML files exists (the Webmap pages,
+their scripts and the KML carry no rights notice: checked 2026-10-30). Judge for yourself whether the site-wide
+terms reach these files. The pages were saved under `evidence/terms/`; the quotations are in `docs/bureau_terms.json`.
+
+The Kinki (近畿) sentence, from <https://www.kkr.mlit.go.jp/link.html>:
+
+> 当ホームページで公開している情報（以下「コンテンツ」といいます。）の著作権は、特記されていない限り国土交通省近畿地方整備局に帰属し、権利表記の記載がない限り「 公共データ利用規約（第1.0版） 」（PDL1.0）に準拠した利用条件の下で、利用することができます。
+
+The sentence of each bureau whose points are in this dataset:
+
+- 中部地方整備局 (https://www.cbr.mlit.go.jp/policy.htm):
+  > 当ホームページで公開している情報（以下「コンテンツ」といいます。）の著作権は、特記されていない限り国土交通省中部地方整備局に帰属し、権利表記の記載がない限り「 公共データ利用規約（第1.0版） 」（PDL1.0）に準拠した利用条件の下で、利用することができます。
+- 中国地方整備局 (https://www.cgr.mlit.go.jp/about_manual/index.html):
+  > 当ホームページで公開している情報（以下「コンテンツ」といいます。）の著作権は、特記されていない限り国土交通省中国地方整備局に帰属し、権利表記の記載がない限り「 公共データ利用規約（第1.0版） 」（PDL1.0）に準拠した利用条件の下で、利用することができます。
+- 北陸地方整備局 (https://www.hrr.mlit.go.jp/help.html):
+  > 当ホームページで公開している情報（以下「コンテンツ」といいます。）の著作権は、特記されていない限り国土交通省北陸地方整備局に帰属し、権利表記の記載がない限り【 公共データ利用規約（第1.0版）（digital.go.jp）［デジタル庁］ 】（以下「PDL1.0」といいます。）に準拠した利用条件の下で、利用することができます。
+- 近畿地方整備局 (https://www.kkr.mlit.go.jp/link.html):
+  > 当ホームページで公開している情報（以下「コンテンツ」といいます。）の著作権は、特記されていない限り国土交通省近畿地方整備局に帰属し、権利表記の記載がない限り「 公共データ利用規約（第1.0版） 」（PDL1.0）に準拠した利用条件の下で、利用することができます。
+- 関東地方整備局 (https://www.ktr.mlit.go.jp/guide/copyright.html):
+  > 関東地方整備局ウェブサイトで掲載・発信している情報(以下「コンテンツ」といいます。)の著作権は、特記されていない限り関東地方整備局に帰属し、権利表記の記載がない限り「公共データ利用規約(第1.0版)」(PDL1.0)に準拠した利用条件の下で、利用することができます。
+- 九州地方整備局 (https://www.qsr.mlit.go.jp/pp/index.html):
+  > 国土交通省九州地方整備局ウェブサイトで掲載・発信している情報（以下「コンテンツ」といいます。）の著作権は、特記されていない限り国土交通省九州地方整備局に帰属し、権利表記の記載がない限り「 公共データ利用規約（第1.0版） 」（PDL1.0）に準拠した利用条件の下で、利用することができます。
+- 四国地方整備局 (https://www.skr.mlit.go.jp/manual.html):
+  > 当ホームページで公開している情報（以下「コンテンツ」といいます。）の著作権は、特記されていない限り国土交通省四国地方整備局に帰属し、権利表記の記載がない限り「 公共データ利用規約（第1.0版） 」（PDL1.0）に準拠した利用条件の下で、利用することができます。
+- 東北地方整備局 (https://www.thr.mlit.go.jp/policy.pdf):
+  > 当ホームページのコンテンツの利用については、【 公共データ利用規約（第 1.0 版） (digital.go.jp) ［デジタル庁］】に定めるとおりです。
+
+The terms exclude symbol marks, logos and character designs, and content for which a separate rule is stated
+(the Kyushu page adds that some content may be restricted by individual laws). The background map of the Webmaps is
+the GSI's 地理院地図 and is not part of the data. The 箇所表 PDFs (not included here) hold GSI maps and photographs of
+the sites; no rights mark other than the GSI map note was found on the 40 PDFs that were looked at.
+
+Attribution, per bureau (出典：<局>ホームページ（URL）):
+
+- 中部地方整備局: 出典：中部地方整備局ホームページ（https://www.cbr.mlit.go.jp/road_map/doro_bosaijoho_webmap/main/index.html）
+- 中国地方整備局: 出典：中国地方整備局ホームページ（https://www.cgr.mlit.go.jp/doro_bosaijoho_webmap/main/index.html）
+- 北陸地方整備局: 出典：北陸地方整備局ホームページ（https://www.hrr.mlit.go.jp/road/doro_bousaijoho_webmap/main/index.html）
+- 近畿地方整備局: 出典：近畿地方整備局ホームページ（https://www.kkr.mlit.go.jp/road/doro_bosaijoho_webmap/main/index.html）
+- 関東地方整備局: 出典：関東地方整備局ホームページ（https://www.ktr.mlit.go.jp/honkyoku/road/doro_bosaijoho_webmap/main/index.html）
+- 九州地方整備局: 出典：九州地方整備局ホームページ（https://www.qsr.mlit.go.jp/n-michi/doro_bosaijoho_webmap/main/index.html）
+- 四国地方整備局: 出典：四国地方整備局ホームページ（https://www.skr.mlit.go.jp/road/doro_bosaijoho_webmap/main/index.html）
+- 東北地方整備局: 出典：東北地方整備局ホームページ（https://www.thr.mlit.go.jp/road/doro_bosaijoho_webmap/main/index.html）
+
+Processing notice (編集・加工等を行ったことの記載。国が作成したかのような態様で公表・利用してはいけません):
+
+- 中部地方整備局: 「道路防災情報Webマップ 冠水想定箇所」（中部地方整備局）（https://www.cbr.mlit.go.jp/road_map/doro_bosaijoho_webmap/main/index.html）を加工して作成
+- 中国地方整備局: 「道路防災情報Webマップ 冠水想定箇所」（中国地方整備局）（https://www.cgr.mlit.go.jp/doro_bosaijoho_webmap/main/index.html）を加工して作成
+- 北陸地方整備局: 「道路防災情報Webマップ 冠水想定箇所」（北陸地方整備局）（https://www.hrr.mlit.go.jp/road/doro_bousaijoho_webmap/main/index.html）を加工して作成
+- 近畿地方整備局: 「道路防災情報Webマップ 冠水想定箇所」（近畿地方整備局）（https://www.kkr.mlit.go.jp/road/doro_bosaijoho_webmap/main/index.html）を加工して作成
+- 関東地方整備局: 「道路防災情報Webマップ 冠水想定箇所」（関東地方整備局）（https://www.ktr.mlit.go.jp/honkyoku/road/doro_bosaijoho_webmap/main/index.html）を加工して作成
+- 九州地方整備局: 「道路防災情報Webマップ 冠水想定箇所」（九州地方整備局）（https://www.qsr.mlit.go.jp/n-michi/doro_bosaijoho_webmap/main/index.html）を加工して作成
+- 四国地方整備局: 「道路防災情報Webマップ 冠水想定箇所」（四国地方整備局）（https://www.skr.mlit.go.jp/road/doro_bosaijoho_webmap/main/index.html）を加工して作成
+- 東北地方整備局: 「道路防災情報Webマップ 冠水想定箇所」（東北地方整備局）（https://www.thr.mlit.go.jp/road/doro_bosaijoho_webmap/main/index.html）を加工して作成
+
+This dataset is made by yuiseki from the bureaus' PDFs: their tables were read as text and written as Parquet; the text of the
+PDFs is kept as read. It was made by processing the bureaus' data and is not made or endorsed by the State. The licence basis is the
+bureaus' site-wide terms, as for the KML; no rights notice specific to the PDFs was found other than the GSI map note (checked on 40 of
+them), and the PDFs are not redistributed.
+

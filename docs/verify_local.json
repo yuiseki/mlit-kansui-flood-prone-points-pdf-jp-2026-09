@@ -1,0 +1,190 @@
+{
+ "rows": 4525,
+ "ogr_rows": 4525,
+ "per_layer": {
+  "02_aomori_kansui_point": {
+   "ogr": 69,
+   "mine": 69
+  },
+  "03_iwate_kansui_point": {
+   "ogr": 75,
+   "mine": 75
+  },
+  "04_miyagi_kansui_point": {
+   "ogr": 96,
+   "mine": 96
+  },
+  "05_akita_kansui_point": {
+   "ogr": 72,
+   "mine": 72
+  },
+  "06_yamagata_kansui_point": {
+   "ogr": 79,
+   "mine": 79
+  },
+  "07_fukushima_kansui_point": {
+   "ogr": 112,
+   "mine": 112
+  },
+  "08_ibaraki_kansui_point": {
+   "ogr": 31,
+   "mine": 31
+  },
+  "09_tochigi_kansui_point": {
+   "ogr": 104,
+   "mine": 104
+  },
+  "10_gunma_kansui_point": {
+   "ogr": 49,
+   "mine": 49
+  },
+  "11_saitama_kansui_point": {
+   "ogr": 246,
+   "mine": 246
+  },
+  "12_chiba_kansui_point": {
+   "ogr": 91,
+   "mine": 91
+  },
+  "13_tokyo_kansui_point": {
+   "ogr": 135,
+   "mine": 135
+  },
+  "14_kanagawa_kansui_point": {
+   "ogr": 119,
+   "mine": 119
+  },
+  "19_yamanashi_kansui_point": {
+   "ogr": 15,
+   "mine": 15
+  },
+  "20_nagano_kansui_point": {
+   "ogr": 113,
+   "mine": 113
+  },
+  "15_niigata_kansui_point": {
+   "ogr": 472,
+   "mine": 472
+  },
+  "16_toyama_kansui_point": {
+   "ogr": 167,
+   "mine": 167
+  },
+  "17_ishikawa_kansui_point": {
+   "ogr": 112,
+   "mine": 112
+  },
+  "21_gifu_kansui_point": {
+   "ogr": 138,
+   "mine": 138
+  },
+  "22_shizuoka_kansui_point": {
+   "ogr": 124,
+   "mine": 124
+  },
+  "23_aichi_kansui_point": {
+   "ogr": 237,
+   "mine": 237
+  },
+  "24_mie_kansui_point": {
+   "ogr": 192,
+   "mine": 192
+  },
+  "18_fukui_kansui_point": {
+   "ogr": 97,
+   "mine": 97
+  },
+  "25_shiga_kansui_point": {
+   "ogr": 100,
+   "mine": 100
+  },
+  "26_kyoto_kansui_point": {
+   "ogr": 112,
+   "mine": 112
+  },
+  "27_osaka_kansui_point": {
+   "ogr": 180,
+   "mine": 180
+  },
+  "28_hyogo_kansui_point": {
+   "ogr": 162,
+   "mine": 162
+  },
+  "29_nara_kansui_point": {
+   "ogr": 50,
+   "mine": 50
+  },
+  "30_wakayama_kansui_point": {
+   "ogr": 16,
+   "mine": 16
+  },
+  "36_tokushima_kansui_point": {
+   "ogr": 19,
+   "mine": 19
+  },
+  "37_kagawa_kansui_point": {
+   "ogr": 40,
+   "mine": 40
+  },
+  "38_ehime_kansui_point": {
+   "ogr": 27,
+   "mine": 27
+  },
+  "39_kochi_kansui_point": {
+   "ogr": 33,
+   "mine": 33
+  },
+  "40_fukuoka_kansui_point": {
+   "ogr": 144,
+   "mine": 144
+  },
+  "41_saga_kansui_point": {
+   "ogr": 40,
+   "mine": 40
+  },
+  "42_nagasaki_kansui_point": {
+   "ogr": 19,
+   "mine": 19
+  },
+  "43_kumamoto_kansui_point": {
+   "ogr": 156,
+   "mine": 156
+  },
+  "44_oita_kansui_point": {
+   "ogr": 32,
+   "mine": 32
+  },
+  "45_miyazaki_kansui_point": {
+   "ogr": 33,
+   "mine": 33
+  },
+  "46_kagoshima_kansui_point": {
+   "ogr": 144,
+   "mine": 144
+  },
+  "31_tottori_kansui_point": {
+   "ogr": 32,
+   "mine": 32
+  },
+  "32_shimane_kansui_point": {
+   "ogr": 47,
+   "mine": 47
+  },
+  "33_okayama_kansui_point": {
+   "ogr": 85,
+   "mine": 85
+  },
+  "34_hiroshima_kansui_point": {
+   "ogr": 68,
+   "mine": 68
+  },
+  "35_yamaguchi_kansui_point": {
+   "ogr": 41,
+   "mine": 41
+  }
+ },
+ "unique_fid": true,
+ "crs": "EPSG:4326",
+ "null_geometry": 0,
+ "problems": []
+}

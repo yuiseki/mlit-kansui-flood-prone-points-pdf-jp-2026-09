@@ -1,0 +1,11 @@
+{
+ "pdfs": 4410,
+ "records": 4410,
+ "by_layout_status": {
+  "A/ambiguous": 54,
+  "A/ok": 3315,
+  "B/ok": 638,
+  "unknown/layout_unknown": 403
+ },
+ "errors": []
+}

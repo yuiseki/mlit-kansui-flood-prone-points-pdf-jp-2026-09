@@ -1,0 +1,45 @@
+{
+ "scope": "site-wide terms of each bureau. No data-specific licence notice exists on the Webmap pages or in the KML (checked 2026-10-30).",
+ "bureaus": {
+  "thr": {
+   "confirmed": true,
+   "url": "https://www.thr.mlit.go.jp/policy.pdf",
+   "basis": "the bureau's own site terms (link, copyright and policy page) name the Public Data License 1.0"
+  },
+  "ktr": {
+   "confirmed": true,
+   "url": "https://www.ktr.mlit.go.jp/guide/copyright.html",
+   "basis": "the bureau's own site terms (link, copyright and policy page) name the Public Data License 1.0"
+  },
+  "hrr": {
+   "confirmed": true,
+   "url": "https://www.hrr.mlit.go.jp/help.html",
+   "basis": "the bureau's own site terms (link, copyright and policy page) name the Public Data License 1.0"
+  },
+  "cbr": {
+   "confirmed": true,
+   "url": "https://www.cbr.mlit.go.jp/policy.htm",
+   "basis": "the bureau's own site terms (link, copyright and policy page) name the Public Data License 1.0"
+  },
+  "kkr": {
+   "confirmed": true,
+   "url": "https://www.kkr.mlit.go.jp/link.html",
+   "basis": "the bureau's own site terms (link, copyright and policy page) name the Public Data License 1.0"
+  },
+  "skr": {
+   "confirmed": true,
+   "url": "https://www.skr.mlit.go.jp/manual.html",
+   "basis": "the bureau's own site terms (link, copyright and policy page) name the Public Data License 1.0"
+  },
+  "qsr": {
+   "confirmed": true,
+   "url": "https://www.qsr.mlit.go.jp/pp/index.html",
+   "basis": "the bureau's own site terms (link, copyright and policy page) name the Public Data License 1.0"
+  },
+  "cgr": {
+   "confirmed": true,
+   "url": "https://www.cgr.mlit.go.jp/about_manual/index.html",
+   "basis": "the bureau's own site terms (link, copyright and policy page) name the Public Data License 1.0"
+  }
+ }
+}

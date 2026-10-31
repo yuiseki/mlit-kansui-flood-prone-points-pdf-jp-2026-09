@@ -1,0 +1,14 @@
+{
+ "points": 4525,
+ "inside": 4515,
+ "outside": 10,
+ "outside_over_100m": 7,
+ "outside_over_1km": 7,
+ "max_dist_m": 35868.57242132971,
+ "per_layer_outside": {
+  "02_aomori_kansui_point": 2,
+  "04_miyagi_kansui_point": 3,
+  "07_fukushima_kansui_point": 1,
+  "09_tochigi_kansui_point": 4
+ }
+}

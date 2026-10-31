@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="Sat, 31 Aug 2000 12:00:00 GMT">
+
+<title>道路防災情報Webマップ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+<meta name="author" content="Muhammad Usman">
+
+<!-- The styles -->
+<link id="bs-css" href="css/bootstrap-cerulean.css" rel="stylesheet">
+<style type="text/css">
+.sidebar-nav {
+    padding: 9px 0;
+}
+</style>
+
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/charisma-app.css" rel="stylesheet">
+
+<link rel="stylesheet" href="leaflet/leaflet.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="leaflet/leaflet.ie.css" /><![endif]-->
+
+<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!-- The fav icon -->
+<link rel="shortcut icon" href="img/favicon.ico">
+
+
+<style type="text/css">
+.tree li span {
+    border: 0
+}
+
+.tree {
+    overflow-y: hidden;
+}
+
+label.checkbox {
+    margin-bottom: 0px;
+}
+
+.well {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    box-shadow: none
+}
+
+ul {
+    list-style-type: none;
+}
+
+html,body,.row-fluid,#content {
+    height: 100%;
+}
+
+.container-fluid {
+    height: 85%;
+}
+
+#map {
+    height: 100%;
+}
+.leaflet-container {background: #fff;}
+</style>
+
+
+
+</head>
+
+<body>
+    <!-- topbar starts -->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="brand" href="index.html" style="width: 500px;"> <img src="img/logo20.png" /> <span>道路防災情報Webマップ</span></a>
+
+            </div>
+        </div>
+    </div>
+    <!-- topbar ends -->
+    <div class="container-fluid">
+
+        <div class="row-fluid">
+
+            <!-- left menu starts -->
+            <div class="span2 main-menu-span">
+                <div class="well nav-collapse sidebar-nav">
+
+
+                    <div class="tree" style="padding: 0px; max-height: 120%">
+
+                        <ul style="margin: 0px 0px 0px 0px;">
+                            <li><span><i class="icon-folder-open"></i> 事前通行規制区間</span>
+                                <ul>
+<table>
+<tr><td><label class="checkbox"><input type="checkbox" id="kisei" value="31_tottori"> 鳥取県</label></td></tr>
+<tr><td><label class="checkbox"><input type="checkbox" id="kisei" value="32_shimane"> 島根県</label></td></tr>
+<tr><td><label class="checkbox"><input type="checkbox" id="kisei" value="33_okayama"> 岡山県</label></td></tr>
+<tr><td><label class="checkbox"><input type="checkbox" id="kisei" value="34_hiroshima"> 広島県</label></td></tr>
+<tr><td><label class="checkbox"><input type="checkbox" id="kisei" value="35_yamaguchi"> 山口県</label></td></tr>
+</table>
+<!--
+                                    <li><label class="checkbox"><input type="checkbox" id="kisei" value="31_tottori"> 鳥取県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kisei" value="32_shimane"> 島根県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kisei" value="33_okayama"> 岡山県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kisei" value="34_hiroshima"> 広島県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kisei" value="35_yamaguchi"> 山口県</label></li>
+-->
+                                </ul></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="tree" style="padding: 0px; max-height: 120%">
+
+                        <ul style="margin: 0px 0px 0px 0px;">
+                            <li><span><i class="icon-folder-open"></i> 冠水想定箇所</span>
+                                <ul>
+<table>
+<tr><td><label class="checkbox"><input type="checkbox" id="kansui" value="31_tottori_kansui_point"> 鳥取県</label></td></tr>
+<tr><td><label class="checkbox"><input type="checkbox" id="kansui" value="32_shimane_kansui_point"> 島根県</label></td></tr>
+<tr><td><label class="checkbox"><input type="checkbox" id="kansui" value="33_okayama_kansui_point"> 岡山県</label></td></tr>
+<tr><td><label class="checkbox"><input type="checkbox" id="kansui" value="34_hiroshima_kansui_point"> 広島県</label></td></tr>
+<tr><td><label class="checkbox"><input type="checkbox" id="kansui" value="35_yamaguchi_kansui_point"> 山口県</label></td></tr>
+</table>
+<!--
+                                    <li><label class="checkbox"><input type="checkbox" id="kansui" value="31_tottori_kansui_point"> 鳥取県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kansui" value="32_shimane_kansui_point"> 島根県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kansui" value="33_okayama_kansui_point"> 岡山県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kansui" value="34_hiroshima_kansui_point"> 広島県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kansui" value="35_yamaguchi_kansui_point"> 山口県</label></li>
+-->
+                                </ul></li>
+                        </ul>
+                    </div>
+
+                    <div class="tree" style="padding: 0px; max-height: 120%">
+
+                        <ul style="margin: 0px 0px 0px 0px;">
+                            <li><span><i class="icon-folder-open"></i> 緊急輸送道路<BR>（<FONT color="#00aaff">━</FONT>：一次、<FONT color="#4c7300">━</FONT>：二次、<FONT color="#cc9933">━</FONT>：三次）</span>
+                                <ul>
+<table>
+<tr><td><label class="checkbox"><input type="checkbox" id="kansui" value="31_tottori_kinkyuuyusou_line"> 鳥取県</label></td></tr>
+<tr><td><label class="checkbox"><input type="checkbox" id="kansui" value="32_shimane_kinkyuuyusou_line"> 島根県</label></td></tr>
+<tr><td><label class="checkbox"><input type="checkbox" id="kansui" value="33_okayama_kinkyuuyusou_line"> 岡山県</label></td></tr>
+<tr><td><label class="checkbox"><input type="checkbox" id="kansui" value="34_hiroshima_kinkyuuyusou_line"> 広島県</label></td></tr>
+<tr><td><label class="checkbox"><input type="checkbox" id="kansui" value="35_yamaguchi_kinkyuuyusou_line"> 山口県</label></td></tr>
+</table>
+                                </ul></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <!--/.well -->
+            </div>
+            <!--/span-->
+            <!-- left menu ends -->
+
+
+            <div id="content" class="span10">
+                <!-- content starts -->
+                <div id="map"></div>
+
+                <!-- content ends -->
+            </div>
+            <!--/#content.span10-->
+        </div>
+        <!--/fluid-row-->
+
+
+
+    </div>
+    <!--/.fluid-container-->
+
+    <!-- external javascript
+    ================================================== -->
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="js/jquery-ui-1.8.21.custom.min.js"></script>
+
+    <script src="js/bootstrap-tree.js"></script>
+
+    <script src="leaflet/leaflet.js"></script>
+
+    <script src="js/config.js"></script>
+
+    <script src="leaflet/leaflet.utfgrid.js"></script>
+    <script src="leaflet/KML.js"></script>
+    <script src="js/densikokudo.js"></script>
+    <script src="js/doro_bousai.js"></script>
+
+
+</body>
+</html>

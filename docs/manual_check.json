@@ -1,0 +1,6 @@
+{
+ "n": 30,
+ "seed": 20261030,
+ "correct": 28,
+ "note": "every published cell matched the text of the PDF; the 28 include 4 points (熊本県 2, 宮崎県, 鹿児島県) whose name cells ran together with the furigana and are therefore withheld in `joined`; in the other 2 the 管理番号 cell carries a parse artefact: a hyphen lost in 茨城県02-019 and 兵庫県-02-076西宮-⑥ with the second line appended"
+}

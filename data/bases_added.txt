@@ -1,0 +1,5 @@
+31_tottori_kansui_point https://www.cgr.mlit.go.jp/doro_bosaijoho_webmap
+32_shimane_kansui_point https://www.cgr.mlit.go.jp/doro_bosaijoho_webmap
+33_okayama_kansui_point https://www.cgr.mlit.go.jp/doro_bosaijoho_webmap
+34_hiroshima_kansui_point https://www.cgr.mlit.go.jp/doro_bosaijoho_webmap
+35_yamaguchi_kansui_point https://www.cgr.mlit.go.jp/doro_bosaijoho_webmap

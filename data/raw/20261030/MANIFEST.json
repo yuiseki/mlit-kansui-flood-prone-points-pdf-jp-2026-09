@@ -1,0 +1,365 @@
+{
+ "fetched": "2026-10-30",
+ "files": {
+  "02_aomori_kansui_point": {
+   "url": "https://www.thr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/02_aomori_kansui_point.kml",
+   "size": 73779,
+   "sha256": "c17fe340ccbe6d40085b40b2bdc492b5134dab25897d4b8d1f3a9b5f2a3e2e1a",
+   "last_modified": "Wed, 17 Dec 2025 05:56:11 GMT",
+   "content_type": "text/xml",
+   "bureau": "thr"
+  },
+  "03_iwate_kansui_point": {
+   "url": "https://www.thr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/03_iwate_kansui_point.kml",
+   "size": 79380,
+   "sha256": "7a61dea8f6d95ba5e781e3ffd3352e61f265f187cb679c9ee3dcc979947487be",
+   "last_modified": "Wed, 26 Jun 2024 07:28:54 GMT",
+   "content_type": "text/xml",
+   "bureau": "thr"
+  },
+  "04_miyagi_kansui_point": {
+   "url": "https://www.thr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/04_miyagi_kansui_point.kml",
+   "size": 101546,
+   "sha256": "76c125337e56eab73995452bf1262e525fa00207cc3b427d6afb9bf1ebc0eb68",
+   "last_modified": "Tue, 14 May 2019 07:05:41 GMT",
+   "content_type": "text/xml",
+   "bureau": "thr"
+  },
+  "05_akita_kansui_point": {
+   "url": "https://www.thr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/05_akita_kansui_point.kml",
+   "size": 76358,
+   "sha256": "1eed216a73b7e37d8dd3c0b679de5e3b0ec00c957046c56c71cfd9a6e55219cd",
+   "last_modified": "Tue, 14 May 2019 07:05:41 GMT",
+   "content_type": "text/xml",
+   "bureau": "thr"
+  },
+  "06_yamagata_kansui_point": {
+   "url": "https://www.thr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/06_yamagata_kansui_point.kml",
+   "size": 83788,
+   "sha256": "93e0935f55615d05cadc30d11e40d87ae86a7b7d047bcc732349c78edda0eef2",
+   "last_modified": "Tue, 14 May 2019 07:05:42 GMT",
+   "content_type": "text/xml",
+   "bureau": "thr"
+  },
+  "07_fukushima_kansui_point": {
+   "url": "https://www.thr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/07_fukushima_kansui_point.kml",
+   "size": 118889,
+   "sha256": "ac5aee4991bf3690d669046f9f7c085a605bf13225d8a5890ed28f15569af545",
+   "last_modified": "Tue, 14 May 2019 07:05:42 GMT",
+   "content_type": "text/xml",
+   "bureau": "thr"
+  },
+  "08_ibaraki_kansui_point": {
+   "url": "https://www.ktr.mlit.go.jp/honkyoku/road/doro_bosaijoho_webmap/kml/08_ibaraki_kansui_point.kml",
+   "size": 34738,
+   "sha256": "87530bbff8a5677f80e915ea90a83dd4bcbe0f4d2086014ed05ef26c0a0e276d",
+   "last_modified": "Thu, 09 Sep 2021 05:06:49 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "ktr"
+  },
+  "09_tochigi_kansui_point": {
+   "url": "https://www.ktr.mlit.go.jp/honkyoku/road/doro_bosaijoho_webmap/kml/09_tochigi_kansui_point.kml",
+   "size": 115957,
+   "sha256": "2a7ccd87b57fed7b0c27d8585ea6f151c5ee7d517d0f3558799fd6be84759bda",
+   "last_modified": "Thu, 09 Sep 2021 05:06:49 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "ktr"
+  },
+  "10_gunma_kansui_point": {
+   "url": "https://www.ktr.mlit.go.jp/honkyoku/road/doro_bosaijoho_webmap/kml/10_gunma_kansui_point.kml",
+   "size": 55291,
+   "sha256": "6e416539dbdf0319fd2400a1181295b18dcb3f4cc8072e259ed5c1b44d105e18",
+   "last_modified": "Thu, 09 Sep 2021 05:06:49 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "ktr"
+  },
+  "11_saitama_kansui_point": {
+   "url": "https://www.ktr.mlit.go.jp/honkyoku/road/doro_bosaijoho_webmap/kml/11_saitama_kansui_point.kml",
+   "size": 280485,
+   "sha256": "d63551f5053a9c1784d05498d94d25f89aee9e5acaa06bead34e4d253948e6d6",
+   "last_modified": "Thu, 09 Sep 2021 05:06:48 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "ktr"
+  },
+  "12_chiba_kansui_point": {
+   "url": "https://www.ktr.mlit.go.jp/honkyoku/road/doro_bosaijoho_webmap/kml/12_chiba_kansui_point.kml",
+   "size": 101309,
+   "sha256": "229cb21d5f92dffaa662fddf02e9db08071615f6e7b85b23974f1cc8dcec6f6d",
+   "last_modified": "Thu, 09 Sep 2021 05:06:47 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "ktr"
+  },
+  "13_tokyo_kansui_point": {
+   "url": "https://www.ktr.mlit.go.jp/honkyoku/road/doro_bosaijoho_webmap/kml/13_tokyo_kansui_point.kml",
+   "size": 149668,
+   "sha256": "6cd9de6c0cc3c2f3d3cc19ef354ba386352c8027b2196eea56aec1ad3433aa18",
+   "last_modified": "Thu, 09 Sep 2021 05:06:47 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "ktr"
+  },
+  "14_kanagawa_kansui_point": {
+   "url": "https://www.ktr.mlit.go.jp/honkyoku/road/doro_bosaijoho_webmap/kml/14_kanagawa_kansui_point.kml",
+   "size": 58898,
+   "sha256": "61f63bb52f78bae933057c45a2c389b2ef0835a61bfeed5cdb51df91d56e3faa",
+   "last_modified": "Thu, 09 Sep 2021 05:06:47 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "ktr"
+  },
+  "19_yamanashi_kansui_point": {
+   "url": "https://www.ktr.mlit.go.jp/honkyoku/road/doro_bosaijoho_webmap/kml/19_yamanashi_kansui_point.kml",
+   "size": 8173,
+   "sha256": "5393a1b398ac6e46d5db2acbba35c0654790227a03b3efde7513329c1c756b43",
+   "last_modified": "Thu, 09 Sep 2021 05:06:46 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "ktr"
+  },
+  "20_nagano_kansui_point": {
+   "url": "https://www.ktr.mlit.go.jp/honkyoku/road/doro_bosaijoho_webmap/kml/20_nagano_kansui_point.kml",
+   "size": 123548,
+   "sha256": "3f04d6fb075beb2dc5e2dbd7539e96abaf6f18c3e984757e4a13096694334840",
+   "last_modified": "Thu, 09 Sep 2021 05:06:46 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "ktr"
+  },
+  "15_niigata_kansui_point": {
+   "url": "https://www.hrr.mlit.go.jp/road/doro_bousaijoho_webmap/kml/15_niigata_kansui_point.kml",
+   "size": 505263,
+   "sha256": "5a84b7b0e4954d0c1f8dc0d6ca1b1a5f4d4fc8bd07ac98deeff2c87cd66e5fda",
+   "last_modified": "Thu, 13 Aug 2015 05:36:22 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "hrr"
+  },
+  "16_toyama_kansui_point": {
+   "url": "https://www.hrr.mlit.go.jp/road/doro_bousaijoho_webmap/kml/16_toyama_kansui_point.kml",
+   "size": 178335,
+   "sha256": "6659c7deb9c628af972236fa499d9a3380bda4cd1a4934996c2270ca620d7a00",
+   "last_modified": "Thu, 15 May 2014 05:30:38 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "hrr"
+  },
+  "17_ishikawa_kansui_point": {
+   "url": "https://www.hrr.mlit.go.jp/road/doro_bousaijoho_webmap/kml/17_ishikawa_kansui_point.kml",
+   "size": 120065,
+   "sha256": "99e6f5ead91b558a0a04d9daf39a69d3207b652f12b12fb5378b8de1d461083c",
+   "last_modified": "Thu, 13 Aug 2015 05:36:20 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "hrr"
+  },
+  "21_gifu_kansui_point": {
+   "url": "https://www.cbr.mlit.go.jp/road_map/doro_bosaijoho_webmap/kml/21_gifu_kansui_point.kml",
+   "size": 77279,
+   "sha256": "aa8a4e5d3b998fe6d155d5ea0b11df817d72f23762852f8694cf978aa0f34580",
+   "last_modified": "Fri, 04 Sep 2020 07:15:10 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "cbr"
+  },
+  "22_shizuoka_kansui_point": {
+   "url": "https://www.cbr.mlit.go.jp/road_map/doro_bosaijoho_webmap/kml/22_shizuoka_kansui_point.kml",
+   "size": 69559,
+   "sha256": "03a56adeb95908fec342d23c3ac640bbbb87aa24e761d4ccb0e84ed8bc005b7f",
+   "last_modified": "Fri, 04 Sep 2020 07:15:11 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "cbr"
+  },
+  "23_aichi_kansui_point": {
+   "url": "https://www.cbr.mlit.go.jp/road_map/doro_bosaijoho_webmap/kml/23_aichi_kansui_point.kml",
+   "size": 133183,
+   "sha256": "96487998bde1a06c10c3e5f9b443fcc9289716efaf42583c363530faadaec97c",
+   "last_modified": "Fri, 04 Sep 2020 07:15:11 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "cbr"
+  },
+  "24_mie_kansui_point": {
+   "url": "https://www.cbr.mlit.go.jp/road_map/doro_bosaijoho_webmap/kml/24_mie_kansui_point.kml",
+   "size": 106015,
+   "sha256": "ce0ceac8bdedec1b30fe63316aea94e77c1e45e5e1e9d4190bc5fdf481488caf",
+   "last_modified": "Fri, 04 Sep 2020 07:15:12 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "cbr"
+  },
+  "18_fukui_kansui_point": {
+   "url": "https://www.kkr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/18_fukui_kansui_point.kml",
+   "size": 46228,
+   "sha256": "da7fcac12d7e8511b03c445e090e91d4a6563eac3ee8ef7efc7d6ae1920a4947",
+   "last_modified": "Thu, 16 Aug 2018 23:59:22 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "kkr"
+  },
+  "25_shiga_kansui_point": {
+   "url": "https://www.kkr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/25_shiga_kansui_point.kml",
+   "size": 42133,
+   "sha256": "dc8c91b9fdd7316c7888a52dad36b262214c6f17f4c9600b745c1ee65a657795",
+   "last_modified": "Thu, 10 Sep 2026 06:46:24 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "kkr"
+  },
+  "26_kyoto_kansui_point": {
+   "url": "https://www.kkr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/26_kyoto_kansui_point.kml",
+   "size": 53553,
+   "sha256": "288495222abff939410c34446fb44848d3b13325020f42b9723b7ad92358c640",
+   "last_modified": "Fri, 21 Jun 2019 08:58:05 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "kkr"
+  },
+  "27_osaka_kansui_point": {
+   "url": "https://www.kkr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/27_osaka_kansui_point.kml",
+   "size": 85427,
+   "sha256": "2212458ae6f5f2e8b28f07edb7da4204ef5ef062a12986f12e8a8c6e7789473a",
+   "last_modified": "Fri, 21 Jun 2019 08:58:10 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "kkr"
+  },
+  "28_hyogo_kansui_point": {
+   "url": "https://www.kkr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/28_hyogo_kansui_point.kml",
+   "size": 77546,
+   "sha256": "f121fe8a41741223a3f1e0e9d55c54a685af7f0af225e35ea98885ddbdf6865b",
+   "last_modified": "Tue, 07 Aug 2018 06:58:02 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "kkr"
+  },
+  "29_nara_kansui_point": {
+   "url": "https://www.kkr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/29_nara_kansui_point.kml",
+   "size": 24094,
+   "sha256": "e3368088903fa81d4dda3b298a42b8923a3092d694b2054f16099897f9b2f329",
+   "last_modified": "Tue, 07 Aug 2018 06:52:00 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "kkr"
+  },
+  "30_wakayama_kansui_point": {
+   "url": "https://www.kkr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/30_wakayama_kansui_point.kml",
+   "size": 8314,
+   "sha256": "e12489a0d27a69a5f9da854f898a79cb9ee63edcb449d4c9ee20b883976794ce",
+   "last_modified": "Tue, 07 Aug 2018 07:09:48 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "kkr"
+  },
+  "36_tokushima_kansui_point": {
+   "url": "https://www.skr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/36_tokushima_kansui_point.kml",
+   "size": 20322,
+   "sha256": "90dd41c58705295fc8d8f29137f088bbc8e0ba4c462f5e5b4adf8db69641d5c7",
+   "last_modified": "Sun, 21 Feb 2016 03:42:31 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "skr"
+  },
+  "37_kagawa_kansui_point": {
+   "url": "https://www.skr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/37_kagawa_kansui_point.kml",
+   "size": 43086,
+   "sha256": "af64d63513e0a7814fcbcce7e55153fcf086e63578a41ed058a0402dcaacffa5",
+   "last_modified": "Sun, 21 Feb 2016 03:42:31 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "skr"
+  },
+  "38_ehime_kansui_point": {
+   "url": "https://www.skr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/38_ehime_kansui_point.kml",
+   "size": 28750,
+   "sha256": "bff57638828102af5a9e8103aa855a5e09f43786b142ec6614ede4b218ac193c",
+   "last_modified": "Sun, 21 Feb 2016 03:42:31 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "skr"
+  },
+  "39_kochi_kansui_point": {
+   "url": "https://www.skr.mlit.go.jp/road/doro_bosaijoho_webmap/kml/39_kochi_kansui_point.kml",
+   "size": 35662,
+   "sha256": "e5d35976222c915563e2f2c3a92f053534b9bcd8cd3bad41cb8d859a198aed02",
+   "last_modified": "Tue, 22 Mar 2016 00:00:17 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "skr"
+  },
+  "40_fukuoka_kansui_point": {
+   "url": "https://www.qsr.mlit.go.jp/n-michi/doro_bosaijoho_webmap/kml/40_fukuoka_kansui_point.kml",
+   "size": 78841,
+   "sha256": "e8f5908b0d950f1bb0e6aae040f76b305a9ae6616900a602fb10ab962ba0316e",
+   "last_modified": "Tue, 28 Apr 2026 05:08:59 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "qsr"
+  },
+  "41_saga_kansui_point": {
+   "url": "https://www.qsr.mlit.go.jp/n-michi/doro_bosaijoho_webmap/kml/41_saga_kansui_point.kml",
+   "size": 22276,
+   "sha256": "f4b1ba73a1390d6e7e74cbfa440355bb7f91c546b3b5c3526645c8a1880b2370",
+   "last_modified": "Tue, 28 Apr 2026 05:09:00 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "qsr"
+  },
+  "42_nagasaki_kansui_point": {
+   "url": "https://www.qsr.mlit.go.jp/n-michi/doro_bosaijoho_webmap/kml/42_nagasaki_kansui_point.kml",
+   "size": 10783,
+   "sha256": "ce482a36ff5dbd5de4b5f14da757a94fc694ea040b7f869ad078b978262b904a",
+   "last_modified": "Tue, 28 Apr 2026 05:09:00 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "qsr"
+  },
+  "43_kumamoto_kansui_point": {
+   "url": "https://www.qsr.mlit.go.jp/n-michi/doro_bosaijoho_webmap/kml/43_kumamoto_kansui_point.kml",
+   "size": 84549,
+   "sha256": "c6b5e14371920217c2634d1631a7982352508f972ea66a35bfc6db8220552f37",
+   "last_modified": "Tue, 28 Apr 2026 05:09:00 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "qsr"
+  },
+  "44_oita_kansui_point": {
+   "url": "https://www.qsr.mlit.go.jp/n-michi/doro_bosaijoho_webmap/kml/44_oita_kansui_point.kml",
+   "size": 17905,
+   "sha256": "193bbe313ef3b4cca52a55c7e1151da591f2cf0b7b51cc495a29cba0db04b79a",
+   "last_modified": "Tue, 28 Apr 2026 05:09:01 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "qsr"
+  },
+  "45_miyazaki_kansui_point": {
+   "url": "https://www.qsr.mlit.go.jp/n-michi/doro_bosaijoho_webmap/kml/45_miyazaki_kansui_point.kml",
+   "size": 18515,
+   "sha256": "39062b85bf6d81b31db7a31d6bb4d63a5bb30f27f40bd1e1e7bf6e8fc784225a",
+   "last_modified": "Tue, 28 Apr 2026 05:09:01 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "qsr"
+  },
+  "46_kagoshima_kansui_point": {
+   "url": "https://www.qsr.mlit.go.jp/n-michi/doro_bosaijoho_webmap/kml/46_kagoshima_kansui_point.kml",
+   "size": 77951,
+   "sha256": "4dde4214847dde7b1dd85aa5a729c01a6639a1188a6d08625a335278503486cc",
+   "last_modified": "Tue, 28 Apr 2026 05:09:02 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "bureau": "qsr"
+  },
+  "31_tottori_kansui_point": {
+   "url": "https://www.cgr.mlit.go.jp/doro_bosaijoho_webmap/kml/31_tottori_kansui_point.kml",
+   "size": 17568,
+   "sha256": "fe161d1cc007be15b6820ab93fde6a6e3d96ec26c2d4370b5d4c69ce8fbc2206",
+   "last_modified": "Wed, 05 Aug 2026 06:36:28 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml kml",
+   "bureau": "cgr"
+  },
+  "32_shimane_kansui_point": {
+   "url": "https://www.cgr.mlit.go.jp/doro_bosaijoho_webmap/kml/32_shimane_kansui_point.kml",
+   "size": 25288,
+   "sha256": "d8177aaa49fc505bca17535f4069c745614757f7acbd95cb9c5fdb2e635de473",
+   "last_modified": "Wed, 05 Aug 2026 06:34:10 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml kml",
+   "bureau": "cgr"
+  },
+  "33_okayama_kansui_point": {
+   "url": "https://www.cgr.mlit.go.jp/doro_bosaijoho_webmap/kml/33_okayama_kansui_point.kml",
+   "size": 45137,
+   "sha256": "bbd68ec5c6b648db5ac9d4594afeab36ade8ad2192db3af9c1a0a99edd90298f",
+   "last_modified": "Wed, 05 Aug 2026 06:30:56 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml kml",
+   "bureau": "cgr"
+  },
+  "34_hiroshima_kansui_point": {
+   "url": "https://www.cgr.mlit.go.jp/doro_bosaijoho_webmap/kml/34_hiroshima_kansui_point.kml",
+   "size": 36924,
+   "sha256": "a5982bbeb1f1393f6b039f9d3f8d4b683cbe75fe52e871ec81151d5ab850fbe0",
+   "last_modified": "Wed, 16 Sep 2026 06:09:52 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml kml",
+   "bureau": "cgr"
+  },
+  "35_yamaguchi_kansui_point": {
+   "url": "https://www.cgr.mlit.go.jp/doro_bosaijoho_webmap/kml/35_yamaguchi_kansui_point.kml",
+   "size": 21938,
+   "sha256": "31092f1c5545397075ae3c075a9a81874a70d633d71f86384959bac127754662",
+   "last_modified": "Fri, 18 Sep 2026 05:02:58 GMT",
+   "content_type": "application/vnd.google-earth.kml+xml kml",
+   "bureau": "cgr"
+  }
+ }
+}

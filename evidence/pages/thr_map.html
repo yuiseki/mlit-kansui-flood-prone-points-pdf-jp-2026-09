@@ -1,0 +1,190 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0072)https://www.thr.mlit.go.jp/road/doro_bosaijoho_webmap/main/map-test.html -->
+<!DOCTYPE html PUBLIC "" ""><HTML lang="ja"><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+ 
+<META charset="utf-8"> 
+<META http-equiv="pragma" content="no-cache"> 
+<META http-equiv="cache-control" content="no-cache"> 
+<META http-equiv="expires" content="Sat, 31 Aug 2000 12:00:00 GMT"> 
+<TITLE>道路防災情報Webマップ</TITLE> 
+<META name="viewport" content="width=device-width, initial-scale=1.0"> 
+<META name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template."> 
+<META name="author" content="Muhammad Usman"> <!-- The styles --> <LINK id="bs-css" 
+href="css/bootstrap-cerulean.css" rel="stylesheet"> 
+<STYLE type="text/css">
+.sidebar-nav {
+    padding: 9px 0;
+}
+</STYLE>
+ <LINK href="css/bootstrap-responsive.css" rel="stylesheet"> 
+<LINK href="css/charisma-app.css" rel="stylesheet"> <LINK href="leaflet/leaflet.css" 
+rel="stylesheet"> <!--[if lte IE 8]><link rel="stylesheet" href="leaflet/leaflet.ie.css" /><![endif]--> <!-- The HTML5 shim, for IE6-8 support of HTML5 elements --> <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]--> <!-- The fav icon --> 
+<LINK href="img/favicon.ico" rel="shortcut icon"> 
+<STYLE type="text/css">
+.tree li span {
+    border: 0
+}
+
+.tree {
+    overflow-y: hidden;
+}
+
+label.checkbox {
+    margin-bottom: 0px;
+}
+
+.well {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    box-shadow: none
+}
+
+ul {
+    list-style-type: none;
+}
+
+html,body,.row-fluid,#content {
+    height: 100%;
+}
+
+.container-fluid {
+    height: 85%;
+}
+
+#map {
+    height: 100%;
+}
+.leaflet-container {background: #fff;}
+</STYLE>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY><!-- topbar starts -->     
+<DIV class="navbar">
+<DIV class="navbar-inner">
+<DIV class="container-fluid"><A class="brand" style="width: 500px;" href="https://www.thr.mlit.go.jp/road/doro_bosaijoho_webmap/main/index.html"><IMG 
+src="img/logo20.png"> 
+<SPAN>道路防災情報Webマップ</SPAN></A></DIV></DIV></DIV><!-- topbar ends -->     
+<DIV class="container-fluid">
+<DIV class="row-fluid"><!-- left menu starts -->             
+<DIV class="span2 main-menu-span">
+<DIV class="well nav-collapse sidebar-nav">
+<DIV class="tree" style="padding: 0px; max-height: 120%;">
+<UL style="margin: 0px;">
+  <LI><SPAN><I class="icon-folder-open"></I> 事前通行規制区間</SPAN>                     
+              
+  <UL>
+    <TABLE>
+      <TBODY>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kisei" type="checkbox" value="02_aomori"> 
+          青森県</LABEL></TD></TR>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kisei" type="checkbox" value="03_iwate"> 
+          岩手県</LABEL></TD></TR>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kisei" type="checkbox" value="04_miyagi"> 
+          宮城県</LABEL></TD></TR>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kisei" type="checkbox" value="05_akita"> 
+          秋田県</LABEL></TD></TR>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kisei" type="checkbox" value="06_yamagata"> 
+          山形県</LABEL></TD></TR>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kisei" type="checkbox" value="07_fukushima"> 
+          福島県</LABEL></TD></TR></TBODY></TABLE><!--
+                                    <li><label class="checkbox"><input type="checkbox" id="kisei" value="02_aomori"> 青森県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kisei" value="03_iwate"> 岩手県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kisei" value="04_miyagi"> 宮城県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kisei" value="05_akita"> 秋田県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kisei" value="06_yamagata"> 山形県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kisei" value="07_fukushima"> 福島県</label></li>
+--> 
+                                    </UL></LI></UL></DIV>
+<DIV class="tree" style="padding: 0px; max-height: 120%;">
+<UL style="margin: 0px;">
+  <LI><SPAN><I class="icon-folder-open"></I> 冠水想定箇所</SPAN>                  
+                 
+  <UL>
+    <TABLE>
+      <TBODY>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kansui" type="checkbox" value="02_aomori_kansui_point_V2"> 
+          青森県</LABEL></TD></TR>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kansui" type="checkbox" value="03_iwate_kansui_point_V2"> 
+          岩手県</LABEL></TD></TR>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kansui" type="checkbox" value="04_miyagi_kansui_point_V3"> 
+          宮城県</LABEL></TD></TR>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kansui" type="checkbox" value="05_akita_kansui_point_V3"> 
+          秋田県</LABEL></TD></TR>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kansui" type="checkbox" value="06_yamagata_kansui_point_V3"> 
+          山形県</LABEL></TD></TR>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kansui" type="checkbox" value="07_fukushima_kansui_point_V3"> 
+          福島県</LABEL></TD></TR></TBODY></TABLE><!--
+                                    <li><label class="checkbox"><input type="checkbox" id="kansui" value="02_aomori_kansui_point"> 青森県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kansui" value="03_iwate_kansui_point"> 岩手県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kansui" value="04_miyagi_kansui_point"> 宮城県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kansui" value="05_akita_kansui_point"> 秋田県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kansui" value="06_yamagata_kansui_point"> 山形県</label></li>
+                                    <li><label class="checkbox"><input type="checkbox" id="kansui" value="07_fukushima_kansui_point"> 福島県</label></li>
+--> 
+                                    </UL></LI></UL></DIV>
+<DIV class="tree" style="padding: 0px; max-height: 120%;">
+<UL style="margin: 0px;">
+  <LI><SPAN><I class="icon-folder-open"></I> 緊急輸送道路<BR>（<FONT 
+  color="#00aaff">━</FONT>：一次、<FONT color="#4c7300">━</FONT>：二次、<FONT color="#cc9933">━</FONT>：三次）</SPAN> 
+                                  
+  <UL>
+    <TABLE>
+      <TBODY>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kansui" type="checkbox" value="02_aomori_kinkyuuyusou_line_V2"> 
+          青森県</LABEL></TD></TR>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kansui" type="checkbox" value="03_iwate_kinkyuuyusou_line_V2"> 
+          岩手県</LABEL></TD></TR>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kansui" type="checkbox" value="04_miyagi_kinkyuuyusou_line_V2"> 
+          宮城県</LABEL></TD></TR>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kansui" type="checkbox" value="05_akita_kinkyuuyusou_line_V2"> 
+          秋田県</LABEL></TD></TR>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT id="kansui" type="checkbox" value="06_yamagata_kinkyuuyusou_line_V2"> 
+          山形県</LABEL></TD></TR>
+      <TR>
+        <TD><LABEL class="checkbox"><INPUT type="checkbox" id="kansui"value="07_fukushima_kinkyuuyusou_line_V2"> 
+          福島県</LABEL></TD></TR></TBODY></TABLE></UL></LI></UL></DIV></DIV><!--/.well -->   
+          </DIV><!--/span-->             <!-- left menu ends -->             
+<DIV class="span10" id="content"><!-- content starts -->                 
+<DIV id="map"></DIV><!-- content ends -->             </DIV><!--/#content.span10--> 
+        </DIV><!--/fluid-row-->     </DIV><!--/.fluid-container-->     <!-- external javascript
+    ================================================== --> 
+    <!-- jQuery -->     
+<SCRIPT src="js/jquery-1.7.2.min.js"></SCRIPT>
+     <!-- jQuery UI -->     
+<SCRIPT src="js/jquery-ui-1.8.21.custom.min.js"></SCRIPT>
+     
+<SCRIPT src="js/bootstrap-tree.js"></SCRIPT>
+     
+<SCRIPT src="leaflet/leaflet.js"></SCRIPT>
+     
+<SCRIPT src="js/config.js"></SCRIPT>
+     
+<SCRIPT src="leaflet/leaflet.utfgrid.js"></SCRIPT>
+     
+<SCRIPT src="leaflet/KML.js"></SCRIPT>
+     
+<SCRIPT src="js/densikokudo.js"></SCRIPT>
+     
+<SCRIPT src="js/doro_bousai.js"></SCRIPT>
+ </BODY></HTML>
