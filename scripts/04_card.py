@@ -49,8 +49,9 @@ def main() -> int:
     rok = rec[rec["parse_status"] == "ok"]
     nfur = int(rec["name_cells_have_furigana"].sum())
     fur_pts = int(pts["pdf_name"].isin(rec.loc[rec["name_cells_have_furigana"], "pdf_name"]).sum())
-    fur_pref = (
-        pts[pts["pdf_name"].isin(rec.loc[rec["name_cells_have_furigana"], "pdf_name"])]["pref"].value_counts().to_dict()
+    fur_pref = ", ".join(
+        f"{k} {v}"
+        for k, v in pts[pts["pdf_name"].isin(rec.loc[rec["name_cells_have_furigana"], "pdf_name"])]["pref"].value_counts().items()
     )
     nmg = int((~rok["mgmt_no"].astype(str).str.match(r"^.{2,4}[都道府県]-\d\d-\d{1,3}(-\d)?$")).sum())
     nf = int((pts["pdf_key_consistent"] == False).sum())  # noqa: E712
@@ -225,7 +226,7 @@ labels equals the record count except {pv["label_count_mismatch"]} PDFs). Manual
 Only reading: the text of the table cells was taken from each PDF with pdfplumber, whitespace collapsed. Nothing was corrected or
 completed. Added columns: `bureau`, `name_cells_have_furigana`, `parse_status`, `parse_note`, `layout`, `record_no`.
 
-## Known issues (measured {man["fetched"]})
+## Known issues (measured 2026-10-31)
 
 - Not every point has attributes: of the {len(pts):,} points, {int((pts["pdf_match"] == "pdf_unique").sum()):,} have a PDF of their own
   (`pdf_unique`); {int((pts["pdf_match"] == "pdf_shared").sum()):,} share a PDF or the PDF holds several records (`pdf_shared`), {int((pts["pdf_match"] == "pdf_missing").sum())}
@@ -233,7 +234,7 @@ completed. Added columns: `bureau`, `name_cells_have_furigana`, `parse_status`, 
   not know; all their attributes are null.
 - Furigana: some bureaus print the reading of the names above the names, and the text of the PDF then runs the reading into the
   name cells (`place_name`, `underpass_name`, `road_kind`), for example `しどう おおだてまつきせん 市道 大館松木線`.
-  `name_cells_have_furigana` is true for {nfur} records ({fur_pts} points; by prefecture {fur_pref}); the flag marks a cell that begins
+  `name_cells_have_furigana` is true for {nfur} records ({fur_pts} points; by prefecture: {fur_pref}); the flag marks a cell that begins
   with a hiragana run and a space, or holds a hiragana, a space and a hiragana, and can also mark a real name that was wrapped.
   Cells with furigana are not corrected. A reading that does not carry a space (as in `かわまたせん 川又線`, which is caught, or
   furigana joined to the name without a space, which is not) may be missed.
@@ -241,8 +242,7 @@ completed. Added columns: `bureau`, `name_cells_have_furigana`, `parse_status`, 
   兵庫県-02-076西宮-⑥): {nmg:,} of the {len(rok):,} records with `parse_status` ok do not match the pattern 県名-02-nnn. The file stem
   `pdf_key` is the reliable key. In some PDFs the number in the file name differs from the number in the PDF itself (`pdf_key_consistent`
   false), which is as published.
-- The first reading of 4,410 PDFs did not cover the 18 that are 404. A PDF can be replaced by the bureau; the sha256 is that of the file
-  fetched on 2026-10-30 and 2026-10-31.
+- A PDF can be replaced by the bureau; the sha256 is that of the file fetched on 2026-10-30 and 2026-10-31.
 - The layout reader knows A and B; 403 PDFs of other layouts are not read.
 
 ## Reproduce

@@ -164,7 +164,7 @@ them), and the PDFs are not redistributed.
 Only reading: the text of the table cells was taken from each PDF with pdfplumber, whitespace collapsed. Nothing was corrected or
 completed. Added columns: `bureau`, `name_cells_have_furigana`, `parse_status`, `parse_note`, `layout`, `record_no`.
 
-## Known issues (measured 2026-10-30)
+## Known issues (measured 2026-10-31)
 
 - Not every point has attributes: of the 4,525 points, 3,997 have a PDF of their own
   (`pdf_unique`); 504 share a PDF or the PDF holds several records (`pdf_shared`), 20
@@ -172,7 +172,7 @@ completed. Added columns: `bureau`, `name_cells_have_furigana`, `parse_status`, 
   not know; all their attributes are null.
 - Furigana: some bureaus print the reading of the names above the names, and the text of the PDF then runs the reading into the
   name cells (`place_name`, `underpass_name`, `road_kind`), for example `しどう おおだてまつきせん 市道 大館松木線`.
-  `name_cells_have_furigana` is true for 469 records (556 points; by prefecture {'熊本県': 150, '福岡県': 138, '秋田県': 72, '山形県': 69, '鹿児島県': 50, '大分県': 31, '宮崎県': 20, '長崎県': 16, '佐賀県': 6, '青森県': 1, '宮城県': 1, '千葉県': 1, '兵庫県': 1}); the flag marks a cell that begins
+  `name_cells_have_furigana` is true for 469 records (556 points; by prefecture: 熊本県 150, 福岡県 138, 秋田県 72, 山形県 69, 鹿児島県 50, 大分県 31, 宮崎県 20, 長崎県 16, 佐賀県 6, 青森県 1, 宮城県 1, 千葉県 1, 兵庫県 1); the flag marks a cell that begins
   with a hiragana run and a space, or holds a hiragana, a space and a hiragana, and can also mark a real name that was wrapped.
   Cells with furigana are not corrected. A reading that does not carry a space (as in `かわまたせん 川又線`, which is caught, or
   furigana joined to the name without a space, which is not) may be missed.
@@ -180,8 +180,7 @@ completed. Added columns: `bureau`, `name_cells_have_furigana`, `parse_status`, 
   兵庫県-02-076西宮-⑥): 219 of the 3,953 records with `parse_status` ok do not match the pattern 県名-02-nnn. The file stem
   `pdf_key` is the reliable key. In some PDFs the number in the file name differs from the number in the PDF itself (`pdf_key_consistent`
   false), which is as published.
-- The first reading of 4,410 PDFs did not cover the 18 that are 404. A PDF can be replaced by the bureau; the sha256 is that of the file
-  fetched on 2026-10-30 and 2026-10-31.
+- A PDF can be replaced by the bureau; the sha256 is that of the file fetched on 2026-10-30 and 2026-10-31.
 - The layout reader knows A and B; 403 PDFs of other layouts are not read.
 
 ## Reproduce
