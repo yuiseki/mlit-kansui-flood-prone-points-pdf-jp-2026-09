@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Parse the tables of the fetched 箇所表 PDFs into one row per described point (as published; null where unreadable).
 
-    uv run python -u scripts/08_parse_pdfs.py     # data/parquet/pdf_records.parquet, docs/pdf_parse_log.json
+    uv run python -u scripts/08_parse_pdfs.py     # data/parquet/pdf_records_as_read.parquet, docs/pdf_parse_log.json
 
 Layouts: A (説明表 / 箇所表 / 様式), B (道路冠水(危険)想定箇所 forms). Anything else gets one row with layout 'unknown' and
 parse_status 'layout_unknown'. A row whose required cells are not all read gets 'ambiguous'. Nothing is guessed.
@@ -74,7 +74,7 @@ def main() -> int:
     )
     (ROOT / "data" / "parquet").mkdir(parents=True, exist_ok=True)
     df.to_parquet(
-        ROOT / "data" / "parquet" / "pdf_records.parquet",
+        ROOT / "data" / "parquet" / "pdf_records_as_read.parquet",
         compression="zstd",
         index=False,
     )

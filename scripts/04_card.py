@@ -47,11 +47,11 @@ def main() -> int:
     rec = pd.read_parquet(ROOT / "data" / "parquet" / "pdf_records.parquet")
     pts = pd.read_parquet(ROOT / "data" / "parquet" / "point_pdf.parquet")
     rok = rec[rec["parse_status"] == "ok"]
-    nfur = int(rec["name_cells_have_furigana"].sum())
-    fur_pts = int(pts["pdf_name"].isin(rec.loc[rec["name_cells_have_furigana"], "pdf_name"]).sum())
+    nfur = int((rec["name_cells"] != "as_read").sum())
+    fur_pts = int(pts["pdf_name"].isin(rec.loc[rec["name_cells"] != "as_read", "pdf_name"]).sum())
     fur_pref = ", ".join(
         f"{k} {v}"
-        for k, v in pts[pts["pdf_name"].isin(rec.loc[rec["name_cells_have_furigana"], "pdf_name"])]["pref"].value_counts().items()
+        for k, v in pts[pts["pdf_name"].isin(rec.loc[rec["name_cells"] != "as_read", "pdf_name"])]["pref"].value_counts().items()
     )
     nmg = int((~rok["mgmt_no"].astype(str).str.match(r"^.{2,4}[都道府県]-\d\d-\d{1,3}(-\d)?$")).sum())
     nf = int((pts["pdf_key_consistent"] == False).sum())  # noqa: E712
@@ -172,19 +172,19 @@ The KML files are described in the points dataset.
 
 | File | Rows | What a row is |
 |---|---|---|
-| `parquet/pdf_records.parquet` | {len(rec):,} | A PDF that was read (one record each); the cells as read |
+| `parquet/pdf_records.parquet` | {len(rec):,} | A PDF that was read (one record each); the cells as read, except the withheld ones |
 | `parquet/point_pdf.parquet` | {len(pts):,} | A KML point: the key of its PDF and how it was matched |
 | `raw/*/PDF_MANIFEST.json` | {len(pman):,} | A PDF: URL, status, size, Last-Modified, sha256 |
 
-`pdf_records`: `pdf_name` (the file name used locally, `<bureau>__<stem>.pdf`), `pdf_key` (the stem; the key of the points
+`pdf_records`: `pdf_name` (the file name used locally, `<bureau>__<stem>.pdf`), `pdf_url` (the PDF at the bureau), `pdf_key` (the stem; the key of the points
 dataset), `pdf_sha256`, `pdf_pages`, `layout`, `record_no`, `mgmt_no` (管理番号/整理番号), `place_name` (箇所名称), `road_name` (道路名),
 `underpass_name` (アンダーパス等名称/施設名), `road_kind` (種別), `pref_name`, `municipality` (市町村), `aza_chome` (字丁目), `banchi`
 (番地), `sakimei` (地先名), `manager_name`/`manager_tel` (管理者), `manager_tel_text`, `police_name`/`police_tel`/`police_text`,
 `fire_name`/`fire_tel`/`fire_text`, `remarks` (備考), `extra_cells` (JSON: the extra items of some forms, 冠水範囲, 冠水原因, 排水ポンプの有無 ...),
-`parse_note`, `parse_status`, `bureau`, `name_cells_have_furigana`. In layout B the police and fire cells hold name and TEL together as
+`parse_note`, `parse_status`, `bureau`, `name_cells` (`as_read`, or `withheld_furigana_in_source`: see Known issues). In layout B the police and fire cells hold name and TEL together as
 published (`*_text`), and the manager's further cells are in `manager_tel_text`.
 
-`point_pdf`: `fid`, `layer`, `pref`, `name`, `pdf_name`, `pdf_key`, `pdf_match`, `pdf_key_consistent`.
+`point_pdf`: `fid`, `layer`, `pref`, `name`, `pdf_name`, `pdf_url`, `pdf_key`, `pdf_match`, `pdf_key_consistent`.
 
 ## How it was read
 
@@ -214,8 +214,8 @@ points that have a record).
 Checks: {pv["cells_checked"]:,} parsed cells of {pv["pdfs_checked"]} PDFs were looked up in `pdftotext -layout` of the same PDF
 ({pv["cells_not_in_pdftotext"]} not found, all management numbers that the PDF breaks over two lines; the count of 管理番号/整理番号
 labels equals the record count except {pv["label_count_mismatch"]} PDFs). Manual check: {mc["n"]} points drawn at random (seed
-{mc["seed"]}) were compared with the text of their PDFs: {mc["correct"]} of {mc["n"]} had every cell matching the PDF text
-({mc["note"]}). `docs/manual_check_sample.tsv` lists the sample.
+{mc["seed"]}) were compared with the text of their PDFs (before the furigana cells were withheld): {mc["correct"]} of {mc["n"]} had every
+cell matching the PDF text ({mc["note"]}). `docs/manual_check_sample.tsv` lists the sample.
 
 ## Licence
 
@@ -224,7 +224,7 @@ labels equals the record count except {pv["label_count_mismatch"]} PDFs). Manual
 ## What was changed
 
 Only reading: the text of the table cells was taken from each PDF with pdfplumber, whitespace collapsed. Nothing was corrected or
-completed. Added columns: `bureau`, `name_cells_have_furigana`, `parse_status`, `parse_note`, `layout`, `record_no`.
+completed. Added columns: `pdf_url`, `bureau`, `name_cells`, `parse_status`, `parse_note`, `layout`, `record_no`. The cells of the withheld records were set to null (see Known issues).
 
 ## Known issues (measured 2026-10-31)
 
@@ -232,12 +232,13 @@ completed. Added columns: `bureau`, `name_cells_have_furigana`, `parse_status`, 
   (`pdf_unique`); {int((pts["pdf_match"] == "pdf_shared").sum()):,} share a PDF or the PDF holds several records (`pdf_shared`), {int((pts["pdf_match"] == "pdf_missing").sum())}
   have a PDF that is missing (404) and {int((pts["pdf_match"] == "no_pdf").sum())} have no link. {int((rec["layout"] == "unknown").sum())} PDFs have a layout that the reader does
   not know; all their attributes are null.
-- Furigana: some bureaus print the reading of the names above the names, and the text of the PDF then runs the reading into the
-  name cells (`place_name`, `underpass_name`, `road_kind`), for example `しどう おおだてまつきせん 市道 大館松木線`.
-  `name_cells_have_furigana` is true for {nfur} records ({fur_pts} points; by prefecture: {fur_pref}); the flag marks a cell that begins
-  with a hiragana run and a space, or holds a hiragana, a space and a hiragana, and can also mark a real name that was wrapped.
-  Cells with furigana are not corrected. A reading that does not carry a space (as in `かわまたせん 川又線`, which is caught, or
-  furigana joined to the name without a space, which is not) may be missed.
+- Withheld cells (furigana): some bureaus print the reading (furigana) of the names above the names, and the text of the PDF then runs
+  the reading into the name cells, for example `しどう おおだてまつきせん 市道 大館松木線`; the name cannot be told from the reading
+  without guessing. In such a record the three cells `place_name`, `underpass_name` and `road_kind` are **null and `name_cells` is
+  `withheld_furigana_in_source`** ({nfur} records, {fur_pts} points; by prefecture: {fur_pref}). A record is marked when one of the
+  three cells begins with a hiragana run and a space, or holds a hiragana, a space and a hiragana; this can also catch a real name that
+  was wrapped, and it can miss a reading that carries no space. The other cells of the record (municipality, address, manager, police,
+  fire station) were not affected in the cells that were checked, and are published. The PDF itself (`pdf_url`) has the names.
 - The 管理番号 can carry a parse artefact (a lost hyphen as in 茨城県02-001 or 山形県02-204, or a second line appended as in
   兵庫県-02-076西宮-⑥): {nmg:,} of the {len(rok):,} records with `parse_status` ok do not match the pattern 県名-02-nnn. The file stem
   `pdf_key` is the reliable key. In some PDFs the number in the file name differs from the number in the PDF itself (`pdf_key_consistent`
@@ -248,7 +249,7 @@ completed. Added columns: `bureau`, `name_cells_have_furigana`, `parse_status`, 
 ## Reproduce
 
 `scripts/07_fetch_pdfs.py` (one request at a time, 2 s pause), `08_parse_pdfs.py`, `09_verify_pdf.py` (`pdftotext -layout` as a
-second route), `10_attach.py` (matches the points), `11_build_tables.py`, `04_card.py`. The scripts of the points dataset
+second route), `10_attach.py` (matches the points), `11_build_tables.py` (withholds the furigana cells, adds the URL), `04_card.py`. The scripts of the points dataset
 (`01`-`03`, `05`) make the KML table that `10_attach.py` reads; they are in that dataset.
 """
     (ROOT / "data" / "README.md").write_text(card)

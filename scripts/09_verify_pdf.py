@@ -24,7 +24,7 @@ def squash(s: str) -> str:
 
 def main() -> int:
     run = max((ROOT / "data" / "raw").glob("*/MANIFEST.json")).parent
-    df = pd.read_parquet(ROOT / "data" / "parquet" / "pdf_records.parquet")
+    df = pd.read_parquet(ROOT / "data" / "parquet" / "pdf_records_as_read.parquet")
     bad, checked_cells, label_mismatch = [], 0, []
     for name, g in df[df["layout"].isin(["A", "B"])].groupby("pdf_name"):
         text = squash(

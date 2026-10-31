@@ -40,7 +40,7 @@ def last_number(s) -> str | None:
 
 def main() -> int:
     pts = gpd.read_parquet(ROOT / "data" / "parquet" / "kansui_points.parquet")
-    rec = pd.read_parquet(ROOT / "data" / "parquet" / "pdf_records.parquet")
+    rec = pd.read_parquet(ROOT / "data" / "parquet" / "pdf_records_as_read.parquet")
     pts["pdf_name"] = [
         kansui.pdf_name(u) if isinstance(u, str) else None for u in pts["pdf_url"]
     ]

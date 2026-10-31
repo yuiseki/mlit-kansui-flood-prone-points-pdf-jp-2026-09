@@ -3,12 +3,14 @@
 
     uv run python scripts/11_build_tables.py   # data/parquet/pdf_records.parquet, point_pdf.parquet
 
-pdf_records: one row per PDF, the cells as read (see 08_parse_pdfs.py), plus `bureau` (the prefix of the file name) and
-`name_cells_have_furigana`: the PDF prints the reading of the names above them, and the text of the cell may then
-begin with, or hold, the reading (the cell is not corrected; the flag only marks it).
-point_pdf: one row per KML point (no geometry): the key of its PDF and how it was matched. Join with the points on `fid`.
+pdf_records: one row per PDF, the cells as read (pdf_records_as_read.parquet, from 08_parse_pdfs.py), plus `pdf_url` (the PDF at
+the bureau), `bureau` (the prefix of the file name) and `name_cells`. Some PDFs print the reading (furigana) of the names above
+them, and the text of the name cells then runs the reading into the name: in such a record `place_name`, `underpass_name` and
+`road_kind` are null and `name_cells` says `withheld_furigana_in_source` (else `as_read`).
+point_pdf: one row per KML point (no geometry): the key and URL of its PDF and how it was matched. Join with the points on `fid`.
 """
 
+import json
 import re
 
 import geopandas as gpd
@@ -24,16 +26,21 @@ def has_furigana(v) -> bool:
 
 
 def main() -> int:
-    rec = pd.read_parquet(ROOT / "data" / "parquet" / "pdf_records.parquet")
+    run = max((ROOT / "data" / "raw").glob("*/PDF_MANIFEST.json"))
+    urls = {k: v["url"] for k, v in json.loads(run.read_text())["files"].items()}
+    rec = pd.read_parquet(ROOT / "data" / "parquet" / "pdf_records_as_read.parquet")
     rec["bureau"] = rec["pdf_name"].str.split("__").str[0]
-    rec["name_cells_have_furigana"] = rec[NAME_COLS].apply(lambda c: c.map(has_furigana)).any(axis=1)
-    rec.loc[rec["layout"] == "unknown", "name_cells_have_furigana"] = False
+    rec.insert(1, "pdf_url", rec["pdf_name"].map(urls))
+    furi = rec[NAME_COLS].apply(lambda c: c.map(has_furigana)).any(axis=1) & (rec["layout"] != "unknown")
+    rec.loc[furi, NAME_COLS] = None
+    rec["name_cells"] = furi.map({True: "withheld_furigana_in_source", False: "as_read"})
     joined = gpd.read_parquet(ROOT / "data" / "parquet" / "kansui_points_joined.parquet")
     pts = pd.DataFrame(joined[["fid", "layer", "pref", "name", "pdf_name", "pdf_key", "pdf_match", "pdf_key_consistent"]])
+    pts.insert(4, "pdf_url", pts["pdf_name"].map(urls))
     out = ROOT / "data" / "parquet"
     rec.to_parquet(out / "pdf_records.parquet", compression="zstd", index=False)
     pts.to_parquet(out / "point_pdf.parquet", compression="zstd", index=False)
-    print(len(rec), "records,", int(rec["name_cells_have_furigana"].sum()), "with furigana;", len(pts), "points")
+    print(len(rec), "records,", int(furi.sum()), "with furigana;", len(pts), "points")
     return 0
 
 
